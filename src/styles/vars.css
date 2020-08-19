@@ -1,0 +1,13 @@
+:root {
+
+  --background-primary: #ececec;
+  --background-secondary: #b8b4b3;
+  --color-primary: #c800ff;
+  --color-secondary: #0054ff;
+  --text-primary: black;
+  --text-secondary: #262626;
+  --max-width: 1200px;
+  --nav-height: 3rem;
+
+}
+

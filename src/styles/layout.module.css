@@ -1,0 +1,6 @@
+@import 'vars.css';
+
+html, body {
+  background-color: var(--background-primary);
+}
+
