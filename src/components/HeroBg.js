@@ -1,5 +1,5 @@
 import React from "react"
-import hero from "../styles/hero.module.css"
+import heroBackground from "../styles/heroBackground.module.css"
 
 function HeroBg() {
 
@@ -13,10 +13,10 @@ function HeroBg() {
   )
 
   return (
-    <div className={hero.backgroundWrapper}>
-      <div className={hero.backgroundWave}>
-        <div className={hero.backgroundWaveWrapper}>
-          <div className={hero.backgroundFill}/>
+    <div className={heroBackground.wrapper}>
+      <div className={heroBackground.wave}>
+        <div className={heroBackground.waveWrapper}>
+          <div className={heroBackground.fill}/>
           {vector}
 
         </div>
