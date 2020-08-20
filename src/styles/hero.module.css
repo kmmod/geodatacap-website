@@ -11,9 +11,26 @@
 .title {
   width: 48%;
   min-height: 70vh;
+  border: 1px red solid;
 }
 
 .image {
   width: 48%;
   height: 100%;
+  border: 1px red solid;
+}
+
+@media (max-width: 960px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .title {
+    width: 100%;
+    min-height: 40vh;
+  }
+  .image {
+    width: 100%;
+    min-height: 20vh;
+
+  }
 }

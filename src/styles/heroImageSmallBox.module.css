@@ -1,0 +1,114 @@
+@import "vars.css";
+
+.box-base {
+  position: absolute;
+  width: 20%;
+  padding-bottom: 20%;
+  border-radius: 3vw;
+  background: linear-gradient(
+    200deg,
+    var(--color-primary-light) 0%,
+    var(--color-secondary-light) 100%
+  );
+  transform: translateX(0) translateY(-100%) scale(0.5) rotateX(50deg)
+    rotateZ(45deg);
+
+  & .base-inset {
+    position: absolute;
+    margin: 5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 2vw;
+    background: linear-gradient(
+      0deg,
+      var(--color-primary-dark) 0%,
+      var(--color-secondary-dark) 100%
+    );
+  }
+}
+
+.box-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.8);
+
+  & .bottom-one {
+    transform: translateX(-3vw) translateY(-3vw);
+  }
+
+
+  & .center-one {
+    transform: translateX(-4vw) translateY(-4vw);
+  }
+
+  & .center-two {
+    transform: translateX(-5vw) translateY(-5vw);
+  }
+  & .center-three {
+    transform: translateX(-6vw) translateY(-6vw);
+  }
+  & .center-four {
+    transform: translateX(-7vw) translateY(-7vw);
+  }
+
+  & .top-one {
+    transform: translateX(-8vw) translateY(-8vw);
+  }
+
+  & .top-two {
+    transform: translateX(-9vw) translateY(-9vw);
+  }
+
+
+  & .top-inset {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+    border-radius: 2vw;
+    background: linear-gradient(
+            20deg,
+            var(--color-primary) 0%,
+            var(--color-secondary) 100%
+    );
+
+    & .icon {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 2vw;
+      overflow: hidden;
+    }
+  }
+
+  & .plane {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 2vw;
+  }
+
+  & .edge {
+    background: linear-gradient(
+      20deg,
+      var(--color-primary-light) 0%,
+      var(--color-secondary-light) 100%
+    );
+  }
+
+  & .middle {
+    background: linear-gradient(
+      20deg,
+      var(--color-primary) 0%,
+      var(--color-secondary) 100%
+    );
+  }
+}
+
+@media (max-width: 960px) {
+  .box-base {
+    transform: translateX(180%) translateY(-90%) scale(0.6) rotateX(50deg)
+      rotateZ(45deg);
+  }
+}

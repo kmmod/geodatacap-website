@@ -7,14 +7,14 @@ import hero from "../styles/hero.module.css"
 function Hero() {
   return (
     <Section>
-      <HeroBg/>
+      <HeroBg />
       <Container>
         <div className={hero.wrapper}>
           <div className={hero.title}>
             <p>TEXT</p>
           </div>
           <div className={hero.image}>
-            <HeroImage/>
+            <HeroImage />
           </div>
         </div>
       </Container>
