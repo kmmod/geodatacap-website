@@ -24,13 +24,21 @@
   .wrapper {
     flex-direction: column;
   }
+
   .title {
     width: 100%;
-    min-height: 40vh;
+    min-height: 60vw;
   }
+
   .image {
     width: 100%;
-    min-height: 20vh;
+    min-height: 62vw;
+  }
+}
 
+
+@media (max-width: 600px) {
+  .image {
+    min-height: 75vw;
   }
 }

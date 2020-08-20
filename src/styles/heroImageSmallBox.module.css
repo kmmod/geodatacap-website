@@ -4,27 +4,40 @@
   position: absolute;
   width: 20%;
   padding-bottom: 20%;
-  border-radius: 3vw;
+  border-radius: 3vmin;
   background: linear-gradient(
     200deg,
     var(--color-primary-light) 0%,
     var(--color-secondary-light) 100%
   );
-  transform: translateX(0) translateY(-100%) scale(0.5) rotateX(50deg)
-    rotateZ(45deg);
 
   & .base-inset {
     position: absolute;
     margin: 5%;
     width: 90%;
     height: 90%;
-    border-radius: 2vw;
+    border-radius: 2vmin;
     background: linear-gradient(
       0deg,
       var(--color-primary-dark) 0%,
       var(--color-secondary-dark) 100%
     );
   }
+}
+
+.position-one {
+  transform: translateX(0) translateY(-100%) scale(0.5) rotateX(50deg)
+    rotateZ(45deg);
+}
+
+.position-two {
+  transform: translateX(-55%) translateY(-65%) scale(0.5) rotateX(50deg)
+    rotateZ(45deg);
+}
+
+.position-three {
+  transform: translateX(55%) translateY(-135%) scale(0.5) rotateX(50deg)
+    rotateZ(45deg);
 }
 
 .box-hover {
@@ -34,51 +47,63 @@
   transform: scale(0.8);
 
   & .bottom-one {
-    transform: translateX(-3vw) translateY(-3vw);
+    transform: translateX(-3vmin) translateY(-3vmin);
   }
 
-
   & .center-one {
-    transform: translateX(-4vw) translateY(-4vw);
+    transform: translateX(-4vmin) translateY(-4vmin);
   }
 
   & .center-two {
-    transform: translateX(-5vw) translateY(-5vw);
+    transform: translateX(-5vmin) translateY(-5vmin);
   }
+
   & .center-three {
-    transform: translateX(-6vw) translateY(-6vw);
+    transform: translateX(-6vmin) translateY(-6vmin);
   }
+
   & .center-four {
-    transform: translateX(-7vw) translateY(-7vw);
+    transform: translateX(-7vmin) translateY(-7vmin);
   }
 
   & .top-one {
-    transform: translateX(-8vw) translateY(-8vw);
+    transform: translateX(-8vmin) translateY(-8vmin);
   }
-
-  & .top-two {
-    transform: translateX(-9vw) translateY(-9vw);
-  }
-
 
   & .top-inset {
     position: absolute;
-    width: 80%;
-    height: 80%;
-    margin: 10%;
-    border-radius: 2vw;
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+    border-radius: 2vmin;
     background: linear-gradient(
-            20deg,
-            var(--color-primary) 0%,
-            var(--color-secondary) 100%
+      20deg,
+      var(--color-primary) 0%,
+      var(--color-secondary) 100%
     );
 
     & .icon {
       position: absolute;
       width: 100%;
       height: 100%;
-      border-radius: 2vw;
+      border-radius: 2vmin;
       overflow: hidden;
+
+      & svg {
+        position: absolute;
+        width: 60%;
+        height: 60%;
+        margin: 20%;
+        fill: var(--color-tertiary);
+      }
+    }
+
+    & .icon-flash {
+      opacity: 1;
+      animation: iconFlashing;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
     }
   }
 
@@ -86,7 +111,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 2vw;
+    border-radius: 2vmin;
   }
 
   & .edge {
@@ -106,9 +131,48 @@
   }
 }
 
+@keyframes iconFlashing {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
 @media (max-width: 960px) {
-  .box-base {
-    transform: translateX(180%) translateY(-90%) scale(0.6) rotateX(50deg)
+  .position-one {
+    transform: translateX(180%) translateY(50%) scale(0.75) rotateX(50deg)
       rotateZ(45deg);
+  }
+
+  .position-two {
+    transform: translateX(100%) translateY(100%) scale(0.75) rotateX(50deg)
+      rotateZ(45deg);
+  }
+
+  .position-three {
+    transform: translateX(260%) translateY(0) scale(0.75) rotateX(50deg)
+      rotateZ(45deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .position-one {
+    transform: translateX(110%) translateY(80%) scale(0.9) rotateX(50deg)
+    rotateZ(45deg);
+  }
+
+  .position-two {
+    transform: translateX(20%) translateY(140%) scale(0.9) rotateX(50deg)
+    rotateZ(45deg);
+  }
+
+  .position-three {
+    transform: translateX(200%) translateY(20%) scale(0.9) rotateX(50deg)
+    rotateZ(45deg);
   }
 }
