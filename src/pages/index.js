@@ -1,17 +1,16 @@
 import React from "react"
-import Nav from  "../components/Nav"
+import Nav from "../components/Nav"
 import Hero from "../components/Hero"
+import About from "../components/About"
 
 const IndexPage = () => (
   <React.Fragment>
-    <Nav/>
-
+    <Nav />
     <main>
-      <Hero/>
+      <Hero />
+      <About />
     </main>
-
   </React.Fragment>
-
 )
 
 export default IndexPage

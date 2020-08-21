@@ -1,0 +1,509 @@
+import React from "react"
+
+function HeroImageBrain() {
+  return (
+    <svg width="88.69mm" height="88.69mm" version="1.1" viewBox="0 0 88.69 88.69"
+         xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(-54.62 -49.58)" stroke="#000">
+        <rect x="96.89" y="72.03" width="11.72" height="11.72" fill="none" strokeLinecap="round"
+              strokeWidth=".2646"/>
+        <rect x="98.59" y="73.73" width="8.32" height="8.32" fillRule="evenodd" strokeLinecap="round"
+              strokeWidth=".2646"/>
+        <path d="m93.32 68.52h-9.412" fill="none" strokeWidth=".2646"/>
+        <circle cx="83.44" cy="68.52" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <circle cx="93.79" cy="68.52" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <g fill="none" strokeWidth=".2646">
+          <g transform="rotate(90 96.8 71.75)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 103 77.98)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 102 76.95)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 101 75.91)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 99.92 74.87)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 98.88 73.83)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 97.84 72.79)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+        </g>
+        <g fill="none" strokeWidth=".2646">
+          <g transform="rotate(90 96.8 71.75)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 103 77.98)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 102 76.95)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 101 75.91)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 99.92 74.87)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 98.88 73.83)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 97.84 72.79)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+        </g>
+        <g transform="rotate(90 102.8 77.89)" fill="none" strokeWidth=".2646">
+          <g transform="rotate(90 96.8 71.75)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 103 77.98)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 102 76.95)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 101 75.91)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 99.92 74.87)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 98.88 73.83)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 97.84 72.79)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+        </g>
+        <g transform="rotate(180 102.8 77.89)" fill="none" strokeWidth=".2646">
+          <g transform="rotate(90 96.8 71.75)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 103 77.98)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 102 76.95)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 101 75.91)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 99.92 74.87)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 98.88 73.83)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 97.84 72.79)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+        </g>
+        <g transform="rotate(-90 102.8 77.89)" fill="none" strokeWidth=".2646">
+          <g transform="rotate(90 96.8 71.75)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 103 77.98)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 102 76.95)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 101 75.91)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 99.92 74.87)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 98.88 73.83)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+          <g transform="rotate(90 97.84 72.79)">
+            <path d="m95.03 72.03h-2.344"/>
+            <circle cx="92.23" cy="72.03" r=".4686" strokeLinecap="round"/>
+            <circle cx="95.5" cy="72.03" r=".4686" strokeLinecap="round"/>
+          </g>
+        </g>
+        <path d="m89.27 72.56h-2.344" fill="none" strokeWidth=".2646"/>
+        <circle cx="89.74" cy="72.56" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <path d="m89.27 75.31h-2.344" fill="none" strokeWidth=".2646"/>
+        <circle cx="89.74" cy="75.31" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <path d="m59.7 77.24h2.344" fill="none" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-59.23" cy="-77.24" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m56.57 80.38h2.344" fill="none" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-56.1" cy="-80.38" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m62.13 84.12h2.344" fill="none" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-61.66" cy="-84.12" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m89.27 78.52h-2.344" fill="none" strokeWidth=".2646"/>
+        <circle cx="89.74" cy="78.52" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <path d="m89.27 82.63h-2.344" fill="none" strokeWidth=".2646"/>
+        <circle cx="89.74" cy="82.63" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <path d="m91.34 65.21h-1.804" fill="none" strokeWidth=".2646"/>
+        <circle cx="91.81" cy="65.21" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <path d="m93.69 63.35h-2.344" fill="none" strokeWidth=".2646"/>
+        <circle cx="94.16" cy="63.35" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <path d="m93.69 60.38h-10.26" fill="none" strokeWidth=".2646"/>
+        <circle cx="94.16" cy="60.38" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <path d="m73.99 60.27h-2.344" fill="none" strokeWidth=".2646"/>
+        <circle cx="74.46" cy="60.27" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <path d="m66.95 65.99h2.344" fill="none" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-66.49" cy="-65.99" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m62.06 64.73 1.657-1.657" fill="none" strokeWidth=".2646"/>
+        <circle transform="rotate(135)" cx="2.357" cy="-89.66" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m57.6 72.95 1.657-1.657" fill="none" strokeWidth=".2646"/>
+        <circle transform="rotate(135)" cx="11.32" cy="-92.31" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m62.36 74.04 1.657-1.657" fill="none" strokeWidth=".2646"/>
+        <circle transform="rotate(135)" cx="8.727" cy="-96.45" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m78.33 69.28 1.657-1.657" fill="none" strokeWidth=".2646"/>
+        <circle transform="rotate(135)" cx="-5.931" cy="-104.4" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m77.05 56.86 1.657-1.657" fill="none" strokeWidth=".2646"/>
+        <circle transform="rotate(135)" cx="-13.8" cy="-94.69" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m70.48 71.66h-2.344" fill="none" strokeWidth=".2646"/>
+        <circle cx="70.94" cy="71.66" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <path d="m64.02 72.38 0.7169-0.7169h3.526" fill="none" strokeWidth=".2646px"/>
+        <path d="m59.26 71.29 2.317-2.317h13.4l5.632-5.632h10.74" fill="none" strokeWidth=".2646px"/>
+        <path d="m79.98 67.62 2.408-2.408h7.142" fill="none" strokeWidth=".2646px"/>
+        <circle cx="82.96" cy="60.38" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <path d="m63.72 63.08 2.81-2.81h5.119" fill="none" strokeWidth=".2646px"/>
+        <path d="m96.52 64.13v-2.344" fill="none" strokeWidth=".2646"/>
+        <circle transform="rotate(90)" cx="64.6" cy="-96.52" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m100 64.13v-2.344" fill="none" strokeWidth=".2646"/>
+        <circle transform="rotate(90)" cx="64.6" cy="-100" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <path d="m103.3 64.13v-2.344" fill="none" strokeWidth=".2646"/>
+        <circle transform="rotate(90)" cx="64.6" cy="-103.3" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m106.6 64.13v-2.344" fill="none" strokeWidth=".2646"/>
+        <circle transform="rotate(90)" cx="64.6" cy="-106.6" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m69.3 65.99h3.7l9.58-9.58h11.05l2.89 2.89v2.484" fill="none" strokeWidth=".2646px"/>
+        <path d="m101.2 54.08 1.657 1.657" fill="none" strokeWidth=".2646"/>
+        <circle transform="rotate(225)" cx="-109.3" cy="33.29" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m110 54.46-1.657 1.657" fill="none" strokeWidth=".2646"/>
+        <circle transform="rotate(-45)" cx="39.71" cy="116.3" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m114.7 56.01-1.657 1.657" fill="none" strokeWidth=".2646"/>
+        <circle transform="rotate(-45)" cx="41.96" cy="120.7" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m111.5 65.18v-2.344" fill="none" strokeWidth=".2646"/>
+        <circle transform="rotate(90)" cx="65.65" cy="-111.5" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m116.6 64.62v-2.344" fill="none" strokeWidth=".2646"/>
+        <circle transform="rotate(90)" cx="65.09" cy="-116.6" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle cx="122.3" cy="58.21" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <circle transform="rotate(-90)" cx="-58.21" cy="124.6" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-119.1" cy="-62.45" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m124.6 58.68v1.992l-1.774 1.774-3.302-8e-6" fill="none" strokeWidth=".2646px"/>
+        <path d="m78.71 55.21 2.337-2.337h15.59l3.391 3.391v5.524" fill="none" strokeWidth=".2646px"/>
+        <path d="m102.8 55.73 0.4649 0.4649v5.606" fill="none" strokeWidth=".2646px"/>
+        <path d="m108.3 56.12-1.67 1.67v4" fill="none" strokeWidth=".2646px"/>
+        <path d="m113 57.66-1.492 1.492v3.686" fill="none" strokeWidth=".2646px"/>
+        <path d="m116.6 62.28v-1.167l2.9-2.9h2.344" fill="none" strokeWidth=".2646px"/>
+        <path d="m62.04 77.24h8.136l4.674-4.674 12.08 2e-6" fill="none" strokeWidth=".2646px"/>
+        <path d="m76.24 81.12 1.657-1.657" fill="none" strokeWidth=".2646"/>
+        <circle transform="rotate(135)" cx="3.915" cy="-111.3" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m58.92 80.38h12.86l5.067-5.067 10.08 2e-6" fill="none" strokeWidth=".2646px"/>
+        <path d="m77.9 79.46 0.9391-0.9391 8.087 3e-6" fill="none" strokeWidth=".2646px"/>
+        <path d="m82.05 81.44-1.657 1.657" fill="none" strokeWidth=".2646"/>
+        <circle transform="rotate(-45)" cx=".8956" cy="115.6" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m87.5 87.01-1.657 1.657" fill="none" strokeWidth=".2646"/>
+        <circle transform="rotate(-45)" cx=".8211" cy="123.4" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m58.21 87.7 1.657 1.657" fill="none" strokeWidth=".2646"/>
+        <circle transform="rotate(225)" cx="-102.7" cy="-20.85" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m80.39 83.1-1.022 1.022h-14.89" fill="none" strokeWidth=".2646px"/>
+        <path d="m68.3 91.99h4.209" fill="none" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-67.83" cy="-91.99" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m65.19 88.23h10.07" fill="none" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-64.72" cy="-88.23" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-75.73" cy="-88.23" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m85.85 88.66-6.33 6.33h-5.56" fill="none" strokeWidth=".2646px"/>
+        <path d="m59.87 89.36 5.632 5.632h8.458" fill="none" strokeWidth=".2646px"/>
+        <path d="m72.51 91.99h2.78l9.359-9.359h2.282" fill="none" strokeWidth=".2646px"/>
+        <path d="m139.1 77.6-1.657-1.657" fill="none" strokeWidth=".2646"/>
+        <circle transform="matrix(.7071 .7071 .7071 -.7071 0 0)" cx="153.7" cy="43.47" r=".4686"
+                fill="none" strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m131 75.23h2.344" fill="none" strokeWidth=".2646"/>
+        <circle transform="scale(-1,1)" cx="-130.5" cy="75.23" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m137.4 75.94-0.7169-0.7169h-3.526" fill="none" strokeWidth=".2646px"/>
+        <path d="m138.5 101.4-1.657 1.657" fill="none" strokeWidth=".2646"/>
+        <circle transform="rotate(-45)" cx="26.68" cy="169.6" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m122.9 103.8h9.804" fill="none" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-122.4" cy="-103.8" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m136.8 103-0.7169 0.7169h-3.526" fill="none" strokeWidth=".2646px"/>
+        <path d="m128.6 117-1.657 1.657" fill="none" strokeWidth=".2646"/>
+        <circle transform="rotate(-45)" cx="8.671" cy="173.6" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m121.9 119.4h2.344" fill="none" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-121.4" cy="-119.4" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m126.9 118.6-0.7169 0.7169h-2.087" fill="none" strokeWidth=".2646px"/>
+        <circle cx="127.6" cy="64.26" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <path d="m114.2 68.25h2.344" fill="none" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-113.8" cy="-68.25" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m116.6 68.25h2.827l3.991-3.991h3.673" fill="none" strokeWidth=".2646px"/>
+        <path d="m128.4 68.69-1.657 1.657" fill="none" strokeWidth=".2646"/>
+        <circle transform="rotate(-45)" cx="42.71" cy="139.4" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-116.6" cy="-71.06" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m126.8 70.35-0.7169 0.7169h-8.993" fill="none" strokeWidth=".2646px"/>
+        <path d="m130.2 72-1.657 1.657" fill="none" strokeWidth=".2646"/>
+        <circle transform="rotate(-45)" cx="41.62" cy="143" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-116.6" cy="-74.37" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m128.5 73.65-0.7169 0.7169h-10.76" fill="none" strokeWidth=".2646px"/>
+        <circle transform="scale(-1)" cx="-116.6" cy="-76.77" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-116.6" cy="-79.98" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-116.6" cy="-84.12" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-116.6" cy="-87.41" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-116.6" cy="-90.06" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-113.8" cy="-92.08" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-110.9" cy="-93.87" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-108.4" cy="-91.65" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-106.6" cy="-91.65" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-103.3" cy="-91.65" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-99.91" cy="-91.65" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-96.74" cy="-91.65" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-93.02" cy="-90.31" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-86.92" cy="-96.48" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m82 97.83h-10.12" fill="none" strokeWidth=".2646"/>
+        <circle cx="71.41" cy="97.83" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <circle cx="82.47" cy="97.83" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <path d="m135.1 98.88h-9.412" fill="none" strokeWidth=".2646"/>
+        <circle cx="125.2" cy="98.88" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <circle cx="135.6" cy="98.88" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <path d="m122 109.2h-12.09" fill="none" strokeWidth=".2646"/>
+        <circle cx="109.4" cy="109.2" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <circle cx="122.4" cy="109.2" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-93.02" cy="-93.57" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-94.79" cy="-97.45" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-92.88" cy="-101.1" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-75.96" cy="-100.6" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-81.66" cy="-103.4" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-85.57" cy="-107.2" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-91.05" cy="-109.9" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="rotate(135)" cx="18.82" cy="-132.8" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-100.8" cy="-116.8" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-106.6" cy="-105.6" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-106.6" cy="-120.4" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-104.2" cy="-124.7" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-104.2" cy="-124.7" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle cx="114.9" cy="111.3" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <circle cx="114.9" cy="115.3" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <circle cx="114.9" cy="106.3" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <circle transform="rotate(120)" cx="31.72" cy="-154.7" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle cx="112.1" cy="114.5" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <circle cx="118.1" cy="111.3" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <circle cx="107.8" cy="129.5" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <circle cx="110.9" cy="133.2" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <circle cx="113.9" cy="131.4" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-121.4" cy="-116.5" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-124.1" cy="-113.1" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-120.2" cy="-107" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-136.9" cy="-107" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-133.9" cy="-113.1" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle transform="scale(-1)" cx="-135.6" cy="-109.9" r=".4686" fill="none"
+                strokeLinecap="round" strokeWidth=".2646"/>
+        <circle cx="139.3" cy="96.91" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <circle cx="137.8" cy="92.82" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <circle cx="141.2" cy="92.82" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <circle cx="141.2" cy="82.63" r=".4686" fill="none" strokeLinecap="round"
+                strokeWidth=".2646"/>
+        <path d="m136.5 107h-15.83" fill="none" strokeWidth=".2646"/>
+        <circle cx="131.4" cy="101" r=".4686" fill="none" strokeLinecap="round" strokeWidth=".2646"/>
+        <path d="m117.1 76.77h10.7l5.858 5.858h7.142" fill="none" strokeWidth=".2646px"/>
+        <path d="m117.1 79.98h8.135l5.366 5.366h7.019l3.644 3.644v3.353" fill="none"
+              strokeWidth=".2646px"/>
+        <path d="m117.1 84.12h6.853l8.694 8.694h4.705" fill="none" strokeWidth=".2646px"/>
+        <path d="m116.6 90.52v5.34l5.117 5.117h9.179" fill="none" strokeWidth=".2646px"/>
+        <path d="m117.1 87.41h2.402l3.797 3.797v3.098l2.609 2.609h12.94" fill="none"
+              strokeWidth=".2646px"/>
+        <path d="m76.43 100.6h11.02l2.042-2.042v-2.983l1.996-1.996h1.063" fill="none"
+              strokeWidth=".2646px"/>
+        <path d="m92.55 90.31h-3.058l-2.572 2.572v3.124" fill="none" strokeWidth=".2646px"/>
+        <path d="m94.32 97.45h-1.706l-1.799 1.799v2.333l-1.838 1.838h-6.851" fill="none"
+              strokeWidth=".2646px"/>
+        <path d="m99.91 92.12v17.1l-4.23 3.906h-9.176l-5.575-5.575" fill="none" strokeWidth=".2646px"/>
+        <path d="m91.38 109.5 5.354-5.354v-12.07" fill="none" strokeWidth=".2646px"/>
+        <path d="m86.04 107.2h4.112l2.724-2.724v-2.88" fill="none" strokeWidth=".2646px"/>
+        <path d="m103.3 92.12v16.78l-2.435 2.435v4.982" fill="none" strokeWidth=".2646px"/>
+        <path d="m104.2 124.2v-11.87l4.19-4.19v-16.04" fill="none" strokeWidth=".2646px"/>
+        <path d="m106.6 105.1v-12.99" fill="none" strokeWidth=".2646px"/>
+        <path d="m114.5 106-3.604-3.607v-8.047" fill="none" strokeWidth=".2646px"/>
+        <path d="m117.8 104.5-3.984-3.984v-7.973" fill="none" strokeWidth=".2646px"/>
+        <path d="m106.6 120v-5.579l3.079-3.079h4.693" fill="none" strokeWidth=".2646px"/>
+        <path d="m124.4 112.8 2.85-2.85h7.829" fill="none" strokeWidth=".2646px"/>
+        <path d="m118.1 111.8v10.22l-4.23 4.23v4.752" fill="none" strokeWidth=".2646px"/>
+        <path d="m114.9 115.9v5.206l-3.937 3.937v7.695" fill="none" strokeWidth=".2646px"/>
+        <path d="m107.8 129v-4.617l4.374-4.374v-5.086" fill="none" strokeWidth=".2646px"/>
+        <path d="m121.9 116.5h3.211l3.341-3.341h4.993" fill="none" strokeWidth=".2646px"/>
+      </g>
+    </svg>
+
+  )
+}
+
+export default HeroImageBrain

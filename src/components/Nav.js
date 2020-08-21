@@ -1,35 +1,32 @@
 import React, { useEffect, useState } from "react"
-import { Container, Section, SectionFixed } from "./Structure"
+import { Container } from "./Structure"
 import nav from "../styles/nav.module.css"
 import fonts from "../styles/fonts.module.css"
-import { useScroll } from "./ScrollPosition"
+import { useScrollPosition } from "./useScrollPosition"
 
 function Nav() {
   const [hide, setHide] = useState(false)
   const classNames = require("classnames")
-  const scroll = useScroll()
 
-  useEffect(() => {
-    if (hide === false && scroll.scrollY > 50) {
+  useScrollPosition(({ prevPos, currPos }) => {
+    if (hide === false && currPos.y < -30) {
       setHide(true)
-      console.log("setting")
-    }
-    else if (hide === true && scroll.scrollY < 50) {
+    } else if (hide === true && currPos.y > -30) {
       setHide(false)
     }
-  },[useScroll()])
+  })
 
   return (
     <div
       style={{
-        zIndex: '100',
+        zIndex: "100",
         position: "fixed",
         width: "100%",
         height: hide ? "3rem" : "8rem",
         backgroundColor: hide
           ? "rgba(255, 255, 255, 0.95)"
           : "rgba(255, 255, 255, 0)",
-        transition: 'all 0.5s ease',
+        transition: "all 0.5s ease",
       }}
     >
       <Container>
