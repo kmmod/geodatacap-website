@@ -22,9 +22,9 @@
     & .fill {
       position: absolute;
       width: 100vw;
-      height: 88%;
+      height: 100%;
       background-color: var(--background-secondary);
-      transform: translateX(-125%) scale(1.5);
+      transform: translateX(-125%) translateY(-15%) scale(1.5) ;
     }
 
     & svg {

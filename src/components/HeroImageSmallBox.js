@@ -10,8 +10,10 @@ function HeroImageSmallBox(props) {
         return style.positionOne
       case 2:
         return style.positionTwo
-      default:
+      case 3:
         return style.positionThree
+      default:
+        return style.positionOne
     }
   }
 

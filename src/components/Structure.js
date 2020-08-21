@@ -10,6 +10,14 @@ export function Section(props) {
   )
 }
 
+export function SectionFixed(props) {
+  return (
+    <div className={main.sectionFixed}>
+      {props.children}
+    </div>
+  )
+}
+
 export function Container(props) {
   return (
     <div className={main.container}>

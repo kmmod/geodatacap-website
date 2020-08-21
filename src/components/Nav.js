@@ -1,18 +1,39 @@
-import React from "react"
-import { Container, Section } from "./Structure"
+import React, { useEffect, useState } from "react"
+import { Container, Section, SectionFixed } from "./Structure"
 import nav from "../styles/nav.module.css"
 import fonts from "../styles/fonts.module.css"
+import { useScroll } from "../ScrollPosition"
 
 function Nav() {
+  const [hide, setHide] = useState(false)
   const classNames = require("classnames")
+  const scroll = useScroll()
+
+  useEffect(() => {
+    if (hide === false && scroll.scrollY > 25) {
+      setHide(true)
+      console.log("setting")
+    }
+    if (hide === true && scroll.scrollY < 25) {
+      setHide(false)
+    }
+  })
 
   return (
-    <Section>
+    <div
+      style={{
+        zIndex: '100',
+        position: "fixed",
+        width: "100%",
+        height: hide ? "3rem" : "8rem",
+        backgroundColor: hide
+          ? "rgba(255, 255, 255, 0.95)"
+          : "rgba(255, 255, 255, 0)",
+        transition: 'all 0.5s ease',
+      }}
+    >
       <Container>
-        <div
-          className={classNames([nav.wrapper, fonts.nav])}
-          style={{ padding: "3rem 0" }}
-        >
+        <nav className={classNames([nav.wrapper, fonts.nav])}>
           <div className={nav.left}>
             <p>GEO.DATACAP</p>
           </div>
@@ -23,9 +44,9 @@ function Nav() {
             <p>Work</p>
             <p>Contact</p>
           </div>
-        </div>
+        </nav>
       </Container>
-    </Section>
+    </div>
   )
 }
 
