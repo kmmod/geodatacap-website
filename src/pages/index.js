@@ -5,8 +5,13 @@ import Hero from "../components/Hero"
 const IndexPage = () => (
   <React.Fragment>
     <Nav/>
-    <Hero/>
+
+    <main>
+      <Hero/>
+    </main>
+
   </React.Fragment>
+
 )
 
 export default IndexPage

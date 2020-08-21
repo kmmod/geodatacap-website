@@ -1,7 +1,0 @@
-@import "vars.css";
-
-html,
-body {
-  overflow: hidden;
-  background-color: var(--background-primary);
-}

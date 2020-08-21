@@ -1,8 +1,11 @@
 import React, { useEffect, useRef } from "react"
 import style from "../styles/heroImagePhone.module.css"
 import brain from "../images/brain-01.svg"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
-function HeroImagePhone() {
+
+function HeroImagePhone(data) {
   const circles = useRef()
   const classNames = require("classnames")
 
@@ -15,6 +18,8 @@ function HeroImagePhone() {
       circles.current.children[i].style.cssText = elementStyle
     }
   }, [])
+
+  console.log(data)
 
   return (
     <div className={style.phone}>
@@ -32,7 +37,7 @@ function HeroImagePhone() {
               <div className={classNames([style.beam, style.beamSecond])}/>
               <div className={classNames([style.beam, style.beamThird])}/>
               <div className={style.brain}>
-                <img src={brain} alt={"brain"}/>
+                <Img fluid={data.fileName.childImageSharp.fluid} alt={""}/>
               </div>
             </div>
             <div ref={circles} className={style.circlesContainer}>
@@ -54,3 +59,15 @@ function HeroImagePhone() {
 }
 
 export default HeroImagePhone
+
+export const query = graphql`
+  query HeroImageQuery {
+    fileName: file(relativePath: {eq: "brain-01.svg"}){
+      childImageSharp {
+        fluid(maxWidth: 400, maxHeight: 400){
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
