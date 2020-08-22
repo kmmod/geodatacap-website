@@ -1,5 +1,6 @@
 import React from "react"
 import { Container, Section } from "./Structure"
+import ServicesBg from "./ServicesBg"
 import Fade from "react-reveal/Fade"
 import services from "../styles/services.module.css"
 import fonts from "../styles/fonts.module.css"
@@ -25,7 +26,7 @@ function Services() {
 
   return (
     <Section>
-      <div className={services.background} />
+      <ServicesBg />
       <Container>
         <div id={"home"} />
         <div className={services.wrapper}>

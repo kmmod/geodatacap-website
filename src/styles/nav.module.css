@@ -23,7 +23,6 @@
   & p {
     padding: 0 0.6rem 0 0.6rem;
 
-
     &:last-child {
       padding: 0 0 0 0.6rem;
     }
@@ -32,16 +31,15 @@
   & a {
     border-width: 1px;
     border-style: solid;
-    border-color: rgba(0,0,0,0);
+    border-color: rgba(0, 0, 0, 0);
     padding: 0.25rem;
     text-decoration: none;
     color: var(--text-primary);
     transition: color 0.5s ease, border-color 1s ease;
 
-    &:hover{
+    &:hover {
       color: var(--color-secondary);
       border-color: var(--color-secondary);
-
     }
   }
 }
@@ -53,4 +51,11 @@ p {
 
 @media (max-width: 960px) {
   padding: 1rem 0;
+}
+
+@media (hover: none) {
+  .right p a:hover {
+    color: var(--text-primary);
+    border-color: rgba(0, 0, 0, 0);
+  }
 }
