@@ -31,13 +31,6 @@
   }
 
   & svg {
-    //flex-grow: 1;
-    //display: flex;
-    //transform: scale(1.1);
-    //margin: 0 auto;
-    //padding: 0;
-    //min-width: 100%;
-    //width: 100%;
     margin: 0;
     padding: 0;
 
@@ -66,9 +59,20 @@
     margin-bottom: 1rem;
   }
 
+  & svg {
+    height: 3rem;
+    width: 3rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    fill: var(--color-secondary);
+    filter: drop-shadow( 0.5rem 0 0 var(--color-primary-light));
+
+  }
+
   & .breakline {
     display: none;
     height: 1px;
+    width: 100%;
     margin: 1rem 0 2rem 0;
     background-color: rgba(0, 0, 0, 0.5);
   }
@@ -102,8 +106,6 @@
     margin: 0;
 
     &:nth-child(n) {
-      box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
-      background-color: white;
       box-shadow: unset;
       background-color: unset;
     }
@@ -111,5 +113,6 @@
     & .breakline {
       display: block;
     }
+
   }
 }
