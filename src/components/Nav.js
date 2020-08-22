@@ -37,7 +37,7 @@ function Nav() {
           </div>
           <div className={nav.right}>
             <p>
-              <AnchorLink to={"#homr"}>Home</AnchorLink>
+              <AnchorLink to={"#home"}>Home</AnchorLink>
             </p>
             <p>
               <AnchorLink to={"#about"}>About</AnchorLink>
