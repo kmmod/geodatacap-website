@@ -11,6 +11,8 @@ function Hero() {
     <Section>
       <HeroBg/>
       <Container>
+        <div id={"home"}/>
+
         <div className={hero.wrapper}>
           <div className={hero.title}>
             <Fade clear cascade>
@@ -18,9 +20,9 @@ function Hero() {
                 <h1>
                   Build an application powered by <b>Machine Learning</b>
                 </h1>
-                <h2>
+                <h3>
                   We develop effective plans to track your customers behaviour
-                </h2>
+                </h3>
                 <div className={hero.button}>
                   <h6>Get in touch</h6>
                 </div>

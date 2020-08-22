@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { Container } from "./Structure"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { useScrollPosition } from "./useScrollPosition"
 import nav from "../styles/nav.module.css"
 import fonts from "../styles/fonts.module.css"
-import { useScrollPosition } from "./useScrollPosition"
 
 function Nav() {
   const [hide, setHide] = useState(false)
@@ -24,7 +25,7 @@ function Nav() {
         width: "100%",
         height: hide ? "3rem" : "8rem",
         backgroundColor: hide
-          ? "rgba(255, 255, 255, 0.95)"
+          ? "rgba(255, 255, 255, 0.98)"
           : "rgba(255, 255, 255, 0)",
         transition: "all 0.5s ease",
       }}
@@ -35,11 +36,21 @@ function Nav() {
             <p>GEO.DATACAP</p>
           </div>
           <div className={nav.right}>
-            <p>Home</p>
-            <p>About</p>
-            <p>Services</p>
-            <p>Work</p>
-            <p>Contact</p>
+            <p>
+              <AnchorLink to={"#homr"}>Home</AnchorLink>
+            </p>
+            <p>
+              <AnchorLink to={"#about"}>About</AnchorLink>
+            </p>
+            <p>
+              <AnchorLink to={"#services"}>Services</AnchorLink>
+            </p>
+            <p>
+              <AnchorLink to={"#work"}>Work</AnchorLink>
+            </p>
+            <p>
+              <AnchorLink to={"#contact"}>Contact</AnchorLink>
+            </p>
           </div>
         </nav>
       </Container>

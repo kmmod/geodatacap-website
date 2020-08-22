@@ -13,7 +13,6 @@
   width: 48%;
   min-height: 60vh;
   padding: 2rem 0;
-  border: 1px red solid;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,18 +20,25 @@
 }
 
 .image {
+  z-index: 0;
   width: 48%;
   height: 100%;
-  border: 1px red solid;
 }
 
 .button {
+  position: relative;
+  z-index: 1;
   display: inline-block;
   width: auto;
   padding: 1rem 1.5rem;
   margin: 0 auto;
   background-color: var(--color-secondary);
   color: white;
+  transition: background-color 0.5s ease;
+  &:hover {
+    cursor: pointer;
+    background-color: var(--color-secondary-light);
+  }
 }
 
 .image-offset {
@@ -57,11 +63,11 @@
     width: 100%;
     min-height: 53vw;
   }
+
   .image-offset {
     transform: translateY(-10vw) translateX(0);
   }
 }
-
 
 @media (max-width: 600px) {
   .title {
@@ -69,12 +75,15 @@
 
     width: 100%;
   }
+
   .image {
     min-height: 75vw;
   }
+
   .image-offset {
     transform: translateY(0) translateX(0);
   }
+
   .button {
     text-align: center;
     display: block;
