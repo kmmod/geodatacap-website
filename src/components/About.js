@@ -5,7 +5,7 @@ import Fade from "react-reveal/Fade"
 
 import about from "../styles/about.module.css"
 import fonts from "../styles/fonts.module.css"
-import tempimage from "../images/gatsby-icon.png"
+import AboutBulb from "./AboutBulb"
 
 function About() {
   const classNames = require("classnames")
@@ -17,7 +17,7 @@ function About() {
         <div className={about.wrapper}>
           <div className={about.image}>
             <Fade clear>
-              <img src={tempimage} alt={""} />
+              <AboutBulb/>
             </Fade>
           </div>
           <div className={about.content}>

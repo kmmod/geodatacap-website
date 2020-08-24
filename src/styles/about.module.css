@@ -13,10 +13,41 @@
   padding-right: 4rem;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   & img {
     width: 100%;
   }
+}
+
+.imagecontent {
+  width: 100%;
+  height: 100%;
+  & svg {
+    width: 100%;
+  }
+}
+
+.bulbicons {
+  fill: white;
+}
+
+.bulblines {
+  stroke: var(--color-primary-light);
+}
+
+.bulbbottom {
+  stroke: var(--color-primary-light);
+  stroke-width: 0.25;
+  fill: none;
+}
+
+.bulbsecondary {
+  fill: var(--color-secondary-dark);
+}
+
+.bulbprimary {
+  fill: var(--color-primary-light);
 }
 
 .content {
@@ -50,6 +81,7 @@
   .content {
     width: 50%;
   }
+
   .image {
     width: 50%;
   }

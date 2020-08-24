@@ -1,0 +1,60 @@
+@import "vars.css";
+
+.wrapper {
+  width: 100%;
+  padding: 2rem 0 0 0;
+}
+
+.carousel {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.slide {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  & .image {
+    width: 100%;
+    height: 20rem;
+    background-color: darkgray;
+    background-size: cover;
+    background-position: center;
+  }
+
+  & .title {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  & .description {
+    width: 100%;
+  }
+
+  & .follow {
+    width: 100%;
+
+    & a {
+      text-decoration: none;
+      color: var(--color-secondary);
+      transition: color 0.5s ease;
+      &:hover {
+        color: var(--color-secondary-light);
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+}
+
+@media (max-width: 600px) {
+}
+
+@media (hover: none) {
+  .slide .follow a:hover {
+    color: var(--color-secondary);
+  }
+}

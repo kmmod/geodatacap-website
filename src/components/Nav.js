@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { Container } from "./Structure"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { useScrollPosition } from "./useScrollPosition"
+import GeodataCapLogo from "./Logo"
 import nav from "../styles/nav.module.css"
 import fonts from "../styles/fonts.module.css"
 
@@ -33,6 +34,7 @@ function Nav() {
       <Container>
         <nav className={classNames([nav.wrapper, fonts.nav])}>
           <div className={nav.left}>
+            <GeodataCapLogo style={nav.logo}/>
             <p>GEO.DATACAP</p>
           </div>
           <div className={nav.right}>

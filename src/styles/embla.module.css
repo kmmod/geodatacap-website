@@ -1,0 +1,104 @@
+@import "vars.css";
+
+.embla {
+  position: relative;
+  z-index: 1;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__viewport.is-draggable {
+  cursor: grab;
+}
+
+.embla__viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.embla__container {
+  user-select: none;
+
+  position: relative;
+  z-index: 1;
+  display: flex;
+  will-change: transform;
+}
+
+.embla__slide {
+  position: relative;
+  flex: 0 0 33.3%;
+  padding: 1rem;
+}
+
+.embla__button {
+  outline: 0;
+  cursor: pointer;
+  background-color: transparent;
+  touch-action: manipulation;
+  position: absolute;
+  z-index: 1;
+  top: 18.5rem;
+  transform: translateY(-50%);
+  border: 0;
+  width: 3rem;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  fill: var(--color-secondary);
+
+  filter: drop-shadow(1px 0 0 white) drop-shadow(-1px 0 0 white)
+    drop-shadow(0 1px 0 white) drop-shadow(0 -1px 0 white);
+
+  transition: fill 0.5s ease;
+  padding: 0;
+
+  &:hover {
+    fill: var(--color-secondary-light);
+  }
+}
+
+.left {
+  left: -3rem;
+}
+
+.right {
+  right: -3rem;
+}
+
+.embla__button__svg {
+  stroke: white;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1300px) {
+  .left {
+    left: 1rem;
+  }
+
+  .right {
+    right: 1rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .embla__slide {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .embla__slide {
+    flex: 0 0 100%;
+  }
+}
+
+@media (hover: none) {
+  .embla__button:hover {
+    fill: var(--color-secondary);
+
+  }
+}

@@ -12,7 +12,29 @@
 }
 
 .left {
+  height: 100%;
   width: auto;
+  display: flex;
+  align-items: center;
+
+  & p {
+    padding-left: 0;
+  }
+}
+
+.logo {
+  position: absolute;
+  max-height: 4rem;
+  height: 100%;
+  width: 4rem;
+  left: -4rem;
+  padding: 0.25rem 0;
+
+  & svg {
+    height: 100%;
+    width: 100%;
+    fill: var(--color-secondary);
+  }
 }
 
 .right {
@@ -49,8 +71,20 @@ p {
   margin: 0;
 }
 
+@media (max-width: 1300px) {
+  .left p {
+    padding-left: 0.8rem;
+  }
+  .logo {
+    position: relative;
+    left: 0;
+    width: auto;
+
+
+  }
+}
+
 @media (max-width: 960px) {
-  padding: 1rem 0;
 }
 
 @media (hover: none) {

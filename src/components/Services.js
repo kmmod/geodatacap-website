@@ -9,6 +9,8 @@ import fonts from "../styles/fonts.module.css"
 
 const DataBox = props => {
   return (
+    <Fade clear cascade>
+
     <div className={services.container}>
       {props.breakline ? <div className={services.breakline} /> : null}
 
@@ -21,6 +23,7 @@ const DataBox = props => {
         <p>{props.content}</p>
       </div>
     </div>
+    </Fade>
   )
 }
 
@@ -29,8 +32,7 @@ function Services() {
     <Section>
       <ServicesBg />
       <Container>
-        <div id={"home"} />
-        <Fade clear cascade>
+        <div id={"services"} style={{position: "absolute", top:"-2rem"}}/>
           <div className={services.wrapper}>
             <DataBox
               breakline={false}
@@ -82,7 +84,6 @@ function Services() {
               }
             />
           </div>
-        </Fade>
       </Container>
     </Section>
   )
