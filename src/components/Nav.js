@@ -48,7 +48,7 @@ function Nav() {
         <nav className={classNames([nav.wrapper, fonts.nav])}>
           <div className={nav.left}>
             <GeodataCapLogo style={nav.logo} />
-            <p>GEO.DATACAP</p>
+            <p className={hide ? null : nav.logoOffset}>GEO.DATACAP</p>
           </div>
           <div
             className={classNames([

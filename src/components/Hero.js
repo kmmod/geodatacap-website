@@ -3,6 +3,8 @@ import { Container, Section } from "./Structure"
 import HeroBg from "./HeroBg"
 import HeroImage from "./HeroImage"
 import Fade from "react-reveal/Fade"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
+
 import hero from "../styles/hero.module.css"
 import fonts from "../styles/fonts.module.css"
 
@@ -23,9 +25,11 @@ function Hero() {
                 <h3>
                   We develop effective plans to track your customers behaviour
                 </h3>
-                <div className={hero.button}>
-                  <h6>Get in touch</h6>
-                </div>
+                <AnchorLink to={"#contact"}>
+                  <div className={hero.button}>
+                    <h6>Get in touch</h6>
+                  </div>
+                </AnchorLink>
               </div>
             </Fade>
           </div>

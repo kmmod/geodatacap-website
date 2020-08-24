@@ -1,0 +1,14 @@
+@import "vars.css";
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-dark);
+}
+
+.wrapper {
+  padding: 2rem 0;
+  width: 100%;
+  color: white;
+}
