@@ -38,7 +38,7 @@ function Work() {
   return (
     <Section>
       <Container>
-        <div id={"work"}/>
+        <div id={"work"} style={{position: "absolute", top:"-3rem"}}/>
         <div className={work.wrapper}>
           <Fade clear cascade>
             <div className={fonts.header}>

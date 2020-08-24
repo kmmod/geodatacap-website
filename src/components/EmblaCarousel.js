@@ -12,17 +12,15 @@ function EmblaCarousel(props) {
   })
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false)
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false)
-  const [selectedIndex, setSelectedIndex] = useState(0)
 
   const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla])
   const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla])
 
   const onSelect = useCallback(() => {
     if (!embla) return
-    setSelectedIndex(embla.selectedScrollSnap())
     setPrevBtnEnabled(embla.canScrollPrev())
     setNextBtnEnabled(embla.canScrollNext())
-  }, [embla, setSelectedIndex])
+  }, [embla])
 
   useEffect(() => {
     if (embla) {

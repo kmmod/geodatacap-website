@@ -4,14 +4,6 @@ import style from "../styles/embla.module.css"
 
 const classNames = require("classnames")
 
-export const DotButton = ({ selected, onClick }) => (
-  <button
-    className={`embla__dot ${selected ? "is-selected" : ""}`}
-    type="button"
-    onClick={onClick}
-  />
-);
-
 export const PrevButton = ({ enabled, onClick }) => (
   <button
     className={classNames([style.embla__button, style.left])}

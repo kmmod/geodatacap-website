@@ -32,7 +32,7 @@ function Services() {
     <Section>
       <ServicesBg />
       <Container>
-        <div id={"services"} style={{position: "absolute", top:"-2rem"}}/>
+        <div id={"services"} style={{position: "absolute", top:"-3rem"}}/>
           <div className={services.wrapper}>
             <DataBox
               breakline={false}

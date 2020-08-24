@@ -8,12 +8,11 @@ import fonts from "../styles/fonts.module.css"
 import AboutBulb from "./AboutBulb"
 
 function About() {
-  const classNames = require("classnames")
 
   return (
     <Section>
       <Container>
-        <div id={"about"} />
+        <div id={"about"} style={{position: "absolute", top:"-1rem"}}/>
         <div className={about.wrapper}>
           <div className={about.image}>
             <Fade clear>

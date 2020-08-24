@@ -1,13 +1,16 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Container } from "./Structure"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { useScrollPosition } from "./useScrollPosition"
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai"
 import GeodataCapLogo from "./Logo"
 import nav from "../styles/nav.module.css"
 import fonts from "../styles/fonts.module.css"
 
 function Nav() {
   const [hide, setHide] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
   const classNames = require("classnames")
 
   useScrollPosition(({ prevPos, currPos }) => {
@@ -17,6 +20,16 @@ function Nav() {
       setHide(false)
     }
   })
+
+  useEffect(() => {
+    if(mobileOpen) {
+      document.getElementsByTagName("html")[0].style.overflow = "hidden";
+      disableBodyScroll(document.body);
+    } else if(!mobileOpen) {
+      enableBodyScroll(document.body);
+      document.getElementsByTagName("html")[0].style = "";
+    }
+  }, [mobileOpen])
 
   return (
     <div
@@ -34,25 +47,73 @@ function Nav() {
       <Container>
         <nav className={classNames([nav.wrapper, fonts.nav])}>
           <div className={nav.left}>
-            <GeodataCapLogo style={nav.logo}/>
+            <GeodataCapLogo style={nav.logo} />
             <p>GEO.DATACAP</p>
           </div>
-          <div className={nav.right}>
-            <p>
+          <div
+            className={classNames([
+              nav.right,
+              mobileOpen ? nav.mobileopen : null,
+            ])}
+          >
+            <div
+              className={nav.navclose}
+              onClick={() => {
+                setMobileOpen(false)
+              }}
+              role="presentation"
+            >
+              <AiOutlineClose />
+            </div>
+            <p
+              onClick={() => {
+                setMobileOpen(false)
+              }}
+              role="presentation"
+            >
               <AnchorLink to={"#home"}>Home</AnchorLink>
             </p>
-            <p>
+            <p
+              onClick={() => {
+                setMobileOpen(false)
+              }}
+              role="presentation"
+            >
               <AnchorLink to={"#about"}>About</AnchorLink>
             </p>
-            <p>
+            <p
+              onClick={() => {
+                setMobileOpen(false)
+              }}
+              role="presentation"
+            >
               <AnchorLink to={"#services"}>Services</AnchorLink>
             </p>
-            <p>
+            <p
+              onClick={() => {
+                setMobileOpen(false)
+              }}
+              role="presentation"
+            >
               <AnchorLink to={"#work"}>Work</AnchorLink>
             </p>
-            <p>
+            <p
+              onClick={() => {
+                setMobileOpen(false)
+              }}
+              role="presentation"
+            >
               <AnchorLink to={"#contact"}>Contact</AnchorLink>
             </p>
+          </div>
+          <div
+            className={nav.navopen}
+            onClick={() => {
+              setMobileOpen(true)
+            }}
+            role="presentation"
+          >
+            <AiOutlineMenu />
           </div>
         </nav>
       </Container>
