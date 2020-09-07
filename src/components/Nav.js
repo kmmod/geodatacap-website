@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react"
 import { Container } from "./Structure"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { useScrollPosition } from "./useScrollPosition"
-import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock"
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai"
 import GeodataCapLogo from "./Logo"
+import Language from "./Language"
 import nav from "../styles/nav.module.css"
 import fonts from "../styles/fonts.module.css"
 
@@ -22,12 +23,12 @@ function Nav() {
   })
 
   useEffect(() => {
-    if(mobileOpen) {
-      document.getElementsByTagName("html")[0].style.overflow = "hidden";
-      disableBodyScroll(document.body);
-    } else if(!mobileOpen) {
-      enableBodyScroll(document.body);
-      document.getElementsByTagName("html")[0].style = "";
+    if (mobileOpen) {
+      document.getElementsByTagName("html")[0].style.overflow = "hidden"
+      disableBodyScroll(document.body)
+    } else if (!mobileOpen) {
+      enableBodyScroll(document.body)
+      document.getElementsByTagName("html")[0].style = ""
     }
   }, [mobileOpen])
 
@@ -47,8 +48,10 @@ function Nav() {
       <Container>
         <nav className={classNames([nav.wrapper, fonts.nav])}>
           <div className={nav.left}>
-            <GeodataCapLogo style={nav.logo} />
-            <p className={hide ? null : nav.logoOffset}>GEO.DATACAP</p>
+            <AnchorLink to={"#home"}>
+              <GeodataCapLogo style={nav.logo} />
+              <p className={hide ? null : nav.logoOffset}>GEO.DATACAP</p>
+            </AnchorLink>
           </div>
           <div
             className={classNames([
@@ -65,14 +68,6 @@ function Nav() {
             >
               <AiOutlineClose />
             </div>
-            <p
-              onClick={() => {
-                setMobileOpen(false)
-              }}
-              role="presentation"
-            >
-              <AnchorLink to={"#home"}>Home</AnchorLink>
-            </p>
             <p
               onClick={() => {
                 setMobileOpen(false)
@@ -105,6 +100,9 @@ function Nav() {
             >
               <AnchorLink to={"#contact"}>Contact</AnchorLink>
             </p>
+            <div>
+              <Language />
+            </div>
           </div>
           <div
             className={nav.navopen}

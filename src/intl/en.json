@@ -1,0 +1,26 @@
+{
+  "title": "Geo.DataCap",
+  "description": "We create complex digital solutions, connecting design and technology",
+  "notfound": {
+    "header": "404",
+    "description": "Page does not exist"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "work": "Work",
+    "contact": "Contact"
+  },
+  "contact": {
+    "name": "First Name:",
+    "surname": "Last Name:",
+    "email": "Email:",
+    "company": "Company Name:",
+    "submit": "Send"
+  },
+  "cookies": {
+    "content": "This site uses cookies to give you the most relevant experience. If you continue on this website, you will be providing your consent to our use of cookies.",
+    "accept": "Accept"
+  }
+}

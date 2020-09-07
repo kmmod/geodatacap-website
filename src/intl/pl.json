@@ -1,0 +1,26 @@
+{
+  "title": "Geo.DataCap",
+  "description": "Tworzymy kompleksowe rozwiązania technologiczne",
+  "notfound": {
+    "header": "404",
+    "description": "Podana strona nie istnieje"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "O nas",
+    "services": "Rozwiązania",
+    "work": "Projekty",
+    "contact": "Kontakt"
+  },
+  "contact": {
+    "name": "Imię:",
+    "surname": "Nazwisko:",
+    "email": "Adres email:",
+    "company": "Nazwa firmy:",
+    "submit": "Wyślij"
+  },
+  "cookies": {
+    "content": "Ta strona korzysta z ciasteczek aby umożliwić prawidłowe funkcjonowanie witryny. Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich użycie.",
+    "accept": "Zgoda"
+  }
+}
