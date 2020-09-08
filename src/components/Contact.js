@@ -68,6 +68,7 @@ function Contact({ node }) {
                       id="consent"
                       name="consent"
                       value="consent"
+                      required={true}
                     />
                     <label for="consent" data-content="consent">
                       <p>
