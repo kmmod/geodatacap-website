@@ -8,6 +8,7 @@ import GeodataCapLogo from "./Logo"
 import Language from "./Language"
 import nav from "../styles/nav.module.css"
 import fonts from "../styles/fonts.module.css"
+import { FormattedMessage } from "gatsby-plugin-intl/index"
 
 function Nav() {
   const [hide, setHide] = useState(false)
@@ -74,7 +75,7 @@ function Nav() {
               }}
               role="presentation"
             >
-              <AnchorLink to={"#about"}>About</AnchorLink>
+              <AnchorLink to={"#about"}><FormattedMessage id="nav.about" /></AnchorLink>
             </p>
             <p
               onClick={() => {
@@ -82,7 +83,7 @@ function Nav() {
               }}
               role="presentation"
             >
-              <AnchorLink to={"#services"}>Services</AnchorLink>
+              <AnchorLink to={"#services"}><FormattedMessage id="nav.services" /></AnchorLink>
             </p>
             <p
               onClick={() => {
@@ -90,15 +91,7 @@ function Nav() {
               }}
               role="presentation"
             >
-              <AnchorLink to={"#work"}>Work</AnchorLink>
-            </p>
-            <p
-              onClick={() => {
-                setMobileOpen(false)
-              }}
-              role="presentation"
-            >
-              <AnchorLink to={"#contact"}>Contact</AnchorLink>
+              <AnchorLink to={"#contact"}><FormattedMessage id="nav.contact" /></AnchorLink>
             </p>
             <div className={nav.language}>
               <Language />
