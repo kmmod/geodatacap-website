@@ -48,34 +48,49 @@ function Nav() {
     >
       <Container>
         <nav className={classNames([nav.wrapper, fonts.nav])}>
-          <div className={nav.left}>
+          <div className={classNames([nav.left])}>
             <AnchorLink to={"#home"}>
-              <GeodataCapLogo style={nav.logo} />
-              <p className={hide ? null : nav.logoOffset}>GEO.DATACAP</p>
+              <GeodataCapLogo
+                style={classNames([nav.logo, hide ? null : nav.logoUp])}
+              />
+              <p>GEO.DATACAP</p>
             </AnchorLink>
           </div>
+          <div className={nav.mobileIcon}>
+            {mobileOpen ? (
+              <div
+                className={nav.navopen}
+                onClick={() => {
+                  setMobileOpen(false)
+                }}
+                role="presentation"
+              >
+                <AiOutlineClose />
+              </div>
+            ) : (
+              <div
+                className={nav.navopen}
+                onClick={() => {
+                  setMobileOpen(true)
+                }}
+                role="presentation"
+              >
+                <AiOutlineMenu />
+              </div>
+            )}
+          </div>
           <div
-            className={classNames([
-              nav.right,
-              mobileOpen ? nav.mobileopen : null,
-            ])}
+            className={classNames([nav.right, mobileOpen ? null : nav.navOpen])}
           >
-            <div
-              className={nav.navclose}
-              onClick={() => {
-                setMobileOpen(false)
-              }}
-              role="presentation"
-            >
-              <AiOutlineClose />
-            </div>
             <p
               onClick={() => {
                 setMobileOpen(false)
               }}
               role="presentation"
             >
-              <AnchorLink to={"#about"}><FormattedMessage id="nav.about" /></AnchorLink>
+              <AnchorLink to={"#about"}>
+                <FormattedMessage id="nav.about" />
+              </AnchorLink>
             </p>
             <p
               onClick={() => {
@@ -83,7 +98,9 @@ function Nav() {
               }}
               role="presentation"
             >
-              <AnchorLink to={"#services"}><FormattedMessage id="nav.services" /></AnchorLink>
+              <AnchorLink to={"#services"}>
+                <FormattedMessage id="nav.services" />
+              </AnchorLink>
             </p>
             <p
               onClick={() => {
@@ -91,20 +108,13 @@ function Nav() {
               }}
               role="presentation"
             >
-              <AnchorLink to={"#contact"}><FormattedMessage id="nav.contact" /></AnchorLink>
+              <AnchorLink to={"#contact"}>
+                <FormattedMessage id="nav.contact" />
+              </AnchorLink>
             </p>
             <div className={nav.language}>
               <Language />
             </div>
-          </div>
-          <div
-            className={nav.navopen}
-            onClick={() => {
-              setMobileOpen(true)
-            }}
-            role="presentation"
-          >
-            <AiOutlineMenu />
           </div>
         </nav>
       </Container>

@@ -83,6 +83,8 @@
           height: 40%;
           margin-top: 15%;
           border-radius: 30rem;
+          z-index: 1111;
+
           background-color: var(--color-tertiary-light);
 
           & .brain {
@@ -90,6 +92,7 @@
             width: 160%;
             top: 32%;
             height: 100%;
+            z-index: 1111;
             transform: translateX(-20vmin) translateY(-20vmin) rotateY(0)
               rotateZ(47deg) skewY(-4deg);
             animation: brainMove;
