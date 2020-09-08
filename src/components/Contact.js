@@ -22,10 +22,9 @@ function Contact({ node }) {
               {documentToReactComponents(node.contact.json)}
             </div>
           </Fade>
-
-          <div className={contact.content}>
-            <div className={fonts.body}>
-              <Fade clear cascade>
+          <div className={fonts.body}>
+            <Fade clear cascade>
+              <div className={contact.content}>
                 <form
                   name="gdc-contact"
                   method="post"
@@ -37,7 +36,9 @@ function Contact({ node }) {
                   <input type="hidden" name="form-name" value="gdc-contact" />
 
                   <label for="firstname">
-                    <p><FormattedMessage id="contact.name" /></p>
+                    <p>
+                      <FormattedMessage id="contact.name" />
+                    </p>
                   </label>
                   <input
                     type="text"
@@ -46,7 +47,9 @@ function Contact({ node }) {
                     required=""
                   />
                   <label for="lastname">
-                    <p><FormattedMessage id="contact.surname" /></p>
+                    <p>
+                      <FormattedMessage id="contact.surname" />
+                    </p>
                   </label>
                   <input
                     type="text"
@@ -55,11 +58,15 @@ function Contact({ node }) {
                     required=""
                   />
                   <label htmlFor="email">
-                    <p><FormattedMessage id="contact.email" /></p>
+                    <p>
+                      <FormattedMessage id="contact.email" />
+                    </p>
                   </label>
                   <input type="email" id="email" name="email" required="" />
                   <label htmlFor="company">
-                    <p><FormattedMessage id="contact.company" /></p>
+                    <p>
+                      <FormattedMessage id="contact.company" />
+                    </p>
                   </label>
                   <input type="text" id="Company" name="Company" required="" />
                   <div className={contact.checkbox}>
@@ -77,16 +84,17 @@ function Contact({ node }) {
                     </label>
                   </div>
 
-
                   <button>
-                    <p><FormattedMessage id="contact.submit" /></p>
+                    <p>
+                      <FormattedMessage id="contact.submit" />
+                    </p>
                   </button>
                 </form>
-              </Fade>
-            </div>
-            <div className={contact.image}>
-              <HeroImageBrain />
-            </div>
+                <div className={contact.image}>
+                  <HeroImageBrain />
+                </div>
+              </div>
+            </Fade>
           </div>
         </div>
       </Container>

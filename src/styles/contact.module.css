@@ -41,6 +41,7 @@
 }
 
 .contact-form {
+  width: 100%;
   & label {
     width: 100%;
     display: block;
