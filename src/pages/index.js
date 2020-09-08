@@ -17,7 +17,8 @@ const IndexPage = ({data, intl}) => {
 
   return (
     <Layout>
-      <SEO title={intl.formatMessage({ id: "title" })}/>
+      <SEO title={intl.formatMessage({ id: "title" })}
+           description={intl.formatMessage({id: "description"})}/>
       <Nav/>
       <main>
         <Hero node={node}/>
