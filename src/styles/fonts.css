@@ -1,3 +1,8 @@
 @import "vars.css";
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Work+Sans:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  font-family: "Nunito", sans-serif;
+  outline: none;
+}

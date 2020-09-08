@@ -100,7 +100,7 @@ function Nav() {
             >
               <AnchorLink to={"#contact"}>Contact</AnchorLink>
             </p>
-            <div>
+            <div className={nav.language}>
               <Language />
             </div>
           </div>

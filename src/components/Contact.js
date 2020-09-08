@@ -2,11 +2,15 @@ import React from "react"
 import { Container, Section } from "./Structure"
 import contact from "../styles/contact.module.css"
 import fonts from "../styles/fonts.module.css"
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+import { BLOCKS } from "@contentful/rich-text-types"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import Fade from "react-reveal/Fade"
 import HeroImageBrain from "./HeroImageBrain"
 
-function Contact() {
+function Contact({ node }) {
   return (
     <Section>
       <div id={"contact"} style={{ position: "absolute", top: "-2rem" }} />
@@ -15,16 +19,25 @@ function Contact() {
         <div className={contact.wrapper}>
           <Fade clear cascade>
             <div className={fonts.header}>
-              <h2>We would love to hear from you</h2>
+              {documentToReactComponents(node.contact.json)}
             </div>
           </Fade>
 
           <div className={contact.content}>
             <div className={fonts.body}>
               <Fade clear cascade>
-                <form action={"#"} className={contact.contactForm}>
+                <form
+                  name="gdc-contact"
+                  method="post"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  className={contact.contactForm}
+                >
+                  <input type="hidden" name="bot-field" />
+                  <input type="hidden" name="form-name" value="gdc-contact" />
+
                   <label for="firstname">
-                    <p>First Name</p>
+                    <p><FormattedMessage id="contact.name" /></p>
                   </label>
                   <input
                     type="text"
@@ -33,7 +46,7 @@ function Contact() {
                     required=""
                   />
                   <label for="lastname">
-                    <p>Last Name</p>
+                    <p><FormattedMessage id="contact.surname" /></p>
                   </label>
                   <input
                     type="text"
@@ -42,11 +55,11 @@ function Contact() {
                     required=""
                   />
                   <label htmlFor="email">
-                    <p>Email</p>
+                    <p><FormattedMessage id="contact.email" /></p>
                   </label>
                   <input type="email" id="email" name="email" required="" />
                   <label htmlFor="company">
-                    <p>Company Name</p>
+                    <p><FormattedMessage id="contact.company" /></p>
                   </label>
                   <input type="text" id="Company" name="Company" required="" />
                   <div className={contact.checkbox}>
@@ -58,27 +71,20 @@ function Contact() {
                     />
                     <label for="consent" data-content="consent">
                       <p>
-                        I agree to receive other marketing communications from
-                        GEO.DATACAP
+                        {documentToReactComponents(node.contactConsent.json)}
                       </p>
                     </label>
                   </div>
 
-                  <div className={contact.consentinfo}>
-                    <p>
-                      You can unsubscribe from these communications at any time.
-                      For more information on how to unsubscribe, our privacy
-                      practices please view our Privacy Policy.
-                    </p>
-                  </div>
+
                   <button>
-                    <p>Submit</p>
+                    <p><FormattedMessage id="contact.submit" /></p>
                   </button>
                 </form>
               </Fade>
             </div>
             <div className={contact.image}>
-              <HeroImageBrain/>
+              <HeroImageBrain />
             </div>
           </div>
         </div>

@@ -67,6 +67,11 @@
     line-height: 1.5rem;
     font-weight: normal;
   }
+
+  & b {
+    font-weight: inherit;
+    color: var(--color-secondary);
+  }
 }
 
 @media (max-width: 600px) {

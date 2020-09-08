@@ -99,8 +99,8 @@
   display: flex;
 
   & label p {
-    padding-left: 1rem;
-    font-weight: bolder;
+    padding-left: 0.5rem;
+    font-weight: lighter;
     line-height: 1.1rem;
   }
 }

@@ -8,9 +8,9 @@ import Nav from "../components/Nav"
 import Hero from "../components/Hero"
 import About from "../components/About"
 import Services from "../components/Services"
-import Work from "../components/Work"
 import Contact from "../components/Contact"
 import Footer from "../components/Footer"
+import Cookies from "../components/Cookies"
 
 const IndexPage = ({data, intl}) => {
   const node = data.allContentfulMain.nodes.slice(0, 1).pop()
@@ -21,12 +21,12 @@ const IndexPage = ({data, intl}) => {
       <Nav/>
       <main>
         <Hero node={node}/>
-        <About/>
-        <Services/>
-        <Work/>
-        <Contact/>
+        <About node={node}/>
+        <Services node={node}/>
+        <Contact node={node}/>
         <Footer/>
       </main>
+      <Cookies/>
     </Layout>
   )
 }
@@ -43,11 +43,19 @@ export const query = graphql`
           json
         }
         serviceList {
+          serviceIcon {
+            file {
+              url
+            }
+          }
           serviceDescription {
             json
           }
         }
         contact {
+          json
+        }
+        contactConsent {
           json
         }
       }

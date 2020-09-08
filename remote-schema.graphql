@@ -234,11 +234,13 @@ type ContentfulMain implements Node {
   about: contentfulMainAboutRichTextNode
   childContentfulMainAboutRichTextNode: contentfulMainAboutRichTextNode
   childContentfulMainCompletedProjectsRichTextNode: contentfulMainCompletedProjectsRichTextNode
+  childContentfulMainContactConsentRichTextNode: contentfulMainContactConsentRichTextNode
   childContentfulMainContactRichTextNode: contentfulMainContactRichTextNode
   childContentfulMainIntroRichTextNode: contentfulMainIntroRichTextNode
   children: [Node!]!
   completedProjects: contentfulMainCompletedProjectsRichTextNode
   contact: contentfulMainContactRichTextNode
+  contactConsent: contentfulMainContactConsentRichTextNode
   contentful_id: String
   createdAt(
     "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\"."
@@ -355,6 +357,7 @@ type ContentfulService implements Node {
   node_locale: String
   parent: Node
   serviceDescription: contentfulServiceServiceDescriptionRichTextNode
+  serviceIcon: ContentfulAsset
   spaceId: String
   sys: ContentfulServiceSys
   title: String
@@ -862,6 +865,7 @@ type Query {
   allContentfulMain(filter: ContentfulMainFilterInput, limit: Int, skip: Int, sort: ContentfulMainSortInput): ContentfulMainConnection!
   allContentfulMainAboutRichTextNode(filter: contentfulMainAboutRichTextNodeFilterInput, limit: Int, skip: Int, sort: contentfulMainAboutRichTextNodeSortInput): contentfulMainAboutRichTextNodeConnection!
   allContentfulMainCompletedProjectsRichTextNode(filter: contentfulMainCompletedProjectsRichTextNodeFilterInput, limit: Int, skip: Int, sort: contentfulMainCompletedProjectsRichTextNodeSortInput): contentfulMainCompletedProjectsRichTextNodeConnection!
+  allContentfulMainContactConsentRichTextNode(filter: contentfulMainContactConsentRichTextNodeFilterInput, limit: Int, skip: Int, sort: contentfulMainContactConsentRichTextNodeSortInput): contentfulMainContactConsentRichTextNodeConnection!
   allContentfulMainContactRichTextNode(filter: contentfulMainContactRichTextNodeFilterInput, limit: Int, skip: Int, sort: contentfulMainContactRichTextNodeSortInput): contentfulMainContactRichTextNodeConnection!
   allContentfulMainIntroRichTextNode(filter: contentfulMainIntroRichTextNodeFilterInput, limit: Int, skip: Int, sort: contentfulMainIntroRichTextNodeSortInput): contentfulMainIntroRichTextNodeConnection!
   allContentfulService(filter: ContentfulServiceFilterInput, limit: Int, skip: Int, sort: ContentfulServiceSortInput): ContentfulServiceConnection!
@@ -877,12 +881,13 @@ type Query {
   contentfulCompletedProjects(childContentfulCompletedProjectsProjectsDescriptionRichTextNode: contentfulCompletedProjectsProjectsDescriptionRichTextNodeFilterInput, children: NodeFilterListInput, contentful_id: StringQueryOperatorInput, createdAt: DateQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, main: ContentfulMainFilterListInput, node_locale: StringQueryOperatorInput, parent: NodeFilterInput, projectsBackground: ContentfulAssetFilterInput, projectsDescription: contentfulCompletedProjectsProjectsDescriptionRichTextNodeFilterInput, spaceId: StringQueryOperatorInput, sys: ContentfulCompletedProjectsSysFilterInput, title: StringQueryOperatorInput, updatedAt: DateQueryOperatorInput): ContentfulCompletedProjects
   contentfulCompletedProjectsProjectsDescriptionRichTextNode(children: NodeFilterListInput, content: contentfulCompletedProjectsProjectsDescriptionRichTextNodeContentFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, json: JSONQueryOperatorInput, nodeType: StringQueryOperatorInput, parent: NodeFilterInput, projectsDescription: StringQueryOperatorInput): contentfulCompletedProjectsProjectsDescriptionRichTextNode
   contentfulContentType(children: NodeFilterListInput, description: StringQueryOperatorInput, displayField: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, name: StringQueryOperatorInput, parent: NodeFilterInput): ContentfulContentType
-  contentfulMain(about: contentfulMainAboutRichTextNodeFilterInput, childContentfulMainAboutRichTextNode: contentfulMainAboutRichTextNodeFilterInput, childContentfulMainCompletedProjectsRichTextNode: contentfulMainCompletedProjectsRichTextNodeFilterInput, childContentfulMainContactRichTextNode: contentfulMainContactRichTextNodeFilterInput, childContentfulMainIntroRichTextNode: contentfulMainIntroRichTextNodeFilterInput, children: NodeFilterListInput, completedProjects: contentfulMainCompletedProjectsRichTextNodeFilterInput, contact: contentfulMainContactRichTextNodeFilterInput, contentful_id: StringQueryOperatorInput, createdAt: DateQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, intro: contentfulMainIntroRichTextNodeFilterInput, introButton: StringQueryOperatorInput, node_locale: StringQueryOperatorInput, parent: NodeFilterInput, path: StringQueryOperatorInput, projectsList: ContentfulCompletedProjectsFilterListInput, serviceList: ContentfulServiceFilterListInput, spaceId: StringQueryOperatorInput, sys: ContentfulMainSysFilterInput, title: StringQueryOperatorInput, updatedAt: DateQueryOperatorInput): ContentfulMain
+  contentfulMain(about: contentfulMainAboutRichTextNodeFilterInput, childContentfulMainAboutRichTextNode: contentfulMainAboutRichTextNodeFilterInput, childContentfulMainCompletedProjectsRichTextNode: contentfulMainCompletedProjectsRichTextNodeFilterInput, childContentfulMainContactConsentRichTextNode: contentfulMainContactConsentRichTextNodeFilterInput, childContentfulMainContactRichTextNode: contentfulMainContactRichTextNodeFilterInput, childContentfulMainIntroRichTextNode: contentfulMainIntroRichTextNodeFilterInput, children: NodeFilterListInput, completedProjects: contentfulMainCompletedProjectsRichTextNodeFilterInput, contact: contentfulMainContactRichTextNodeFilterInput, contactConsent: contentfulMainContactConsentRichTextNodeFilterInput, contentful_id: StringQueryOperatorInput, createdAt: DateQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, intro: contentfulMainIntroRichTextNodeFilterInput, introButton: StringQueryOperatorInput, node_locale: StringQueryOperatorInput, parent: NodeFilterInput, path: StringQueryOperatorInput, projectsList: ContentfulCompletedProjectsFilterListInput, serviceList: ContentfulServiceFilterListInput, spaceId: StringQueryOperatorInput, sys: ContentfulMainSysFilterInput, title: StringQueryOperatorInput, updatedAt: DateQueryOperatorInput): ContentfulMain
   contentfulMainAboutRichTextNode(about: StringQueryOperatorInput, children: NodeFilterListInput, content: contentfulMainAboutRichTextNodeContentFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, json: JSONQueryOperatorInput, nodeType: StringQueryOperatorInput, parent: NodeFilterInput): contentfulMainAboutRichTextNode
   contentfulMainCompletedProjectsRichTextNode(children: NodeFilterListInput, completedProjects: StringQueryOperatorInput, content: contentfulMainCompletedProjectsRichTextNodeContentFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, json: JSONQueryOperatorInput, nodeType: StringQueryOperatorInput, parent: NodeFilterInput): contentfulMainCompletedProjectsRichTextNode
+  contentfulMainContactConsentRichTextNode(children: NodeFilterListInput, contactConsent: StringQueryOperatorInput, content: contentfulMainContactConsentRichTextNodeContentFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, json: JSONQueryOperatorInput, nodeType: StringQueryOperatorInput, parent: NodeFilterInput): contentfulMainContactConsentRichTextNode
   contentfulMainContactRichTextNode(children: NodeFilterListInput, contact: StringQueryOperatorInput, content: contentfulMainContactRichTextNodeContentFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, json: JSONQueryOperatorInput, nodeType: StringQueryOperatorInput, parent: NodeFilterInput): contentfulMainContactRichTextNode
   contentfulMainIntroRichTextNode(children: NodeFilterListInput, content: contentfulMainIntroRichTextNodeContentFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, intro: StringQueryOperatorInput, json: JSONQueryOperatorInput, nodeType: StringQueryOperatorInput, parent: NodeFilterInput): contentfulMainIntroRichTextNode
-  contentfulService(childContentfulServiceServiceDescriptionRichTextNode: contentfulServiceServiceDescriptionRichTextNodeFilterInput, children: NodeFilterListInput, contentful_id: StringQueryOperatorInput, createdAt: DateQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, main: ContentfulMainFilterListInput, node_locale: StringQueryOperatorInput, parent: NodeFilterInput, serviceDescription: contentfulServiceServiceDescriptionRichTextNodeFilterInput, spaceId: StringQueryOperatorInput, sys: ContentfulServiceSysFilterInput, title: StringQueryOperatorInput, updatedAt: DateQueryOperatorInput): ContentfulService
+  contentfulService(childContentfulServiceServiceDescriptionRichTextNode: contentfulServiceServiceDescriptionRichTextNodeFilterInput, children: NodeFilterListInput, contentful_id: StringQueryOperatorInput, createdAt: DateQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, main: ContentfulMainFilterListInput, node_locale: StringQueryOperatorInput, parent: NodeFilterInput, serviceDescription: contentfulServiceServiceDescriptionRichTextNodeFilterInput, serviceIcon: ContentfulAssetFilterInput, spaceId: StringQueryOperatorInput, sys: ContentfulServiceSysFilterInput, title: StringQueryOperatorInput, updatedAt: DateQueryOperatorInput): ContentfulService
   contentfulServiceServiceDescriptionRichTextNode(children: NodeFilterListInput, content: contentfulServiceServiceDescriptionRichTextNodeContentFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, json: JSONQueryOperatorInput, nodeType: StringQueryOperatorInput, parent: NodeFilterInput, serviceDescription: StringQueryOperatorInput): contentfulServiceServiceDescriptionRichTextNode
   directory(absolutePath: StringQueryOperatorInput, accessTime: DateQueryOperatorInput, atime: DateQueryOperatorInput, atimeMs: FloatQueryOperatorInput, base: StringQueryOperatorInput, birthTime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, changeTime: DateQueryOperatorInput, children: NodeFilterListInput, ctime: DateQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, dev: IntQueryOperatorInput, dir: StringQueryOperatorInput, ext: StringQueryOperatorInput, extension: StringQueryOperatorInput, gid: IntQueryOperatorInput, id: StringQueryOperatorInput, ino: FloatQueryOperatorInput, internal: InternalFilterInput, mode: IntQueryOperatorInput, modifiedTime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, name: StringQueryOperatorInput, nlink: IntQueryOperatorInput, parent: NodeFilterInput, prettySize: StringQueryOperatorInput, rdev: IntQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, root: StringQueryOperatorInput, size: IntQueryOperatorInput, sourceInstanceName: StringQueryOperatorInput, uid: IntQueryOperatorInput): Directory
   file(absolutePath: StringQueryOperatorInput, accessTime: DateQueryOperatorInput, atime: DateQueryOperatorInput, atimeMs: FloatQueryOperatorInput, base: StringQueryOperatorInput, birthTime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, changeTime: DateQueryOperatorInput, childImageSharp: ImageSharpFilterInput, children: NodeFilterListInput, ctime: DateQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, dev: IntQueryOperatorInput, dir: StringQueryOperatorInput, ext: StringQueryOperatorInput, extension: StringQueryOperatorInput, gid: IntQueryOperatorInput, id: StringQueryOperatorInput, ino: FloatQueryOperatorInput, internal: InternalFilterInput, mode: IntQueryOperatorInput, modifiedTime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, name: StringQueryOperatorInput, nlink: IntQueryOperatorInput, parent: NodeFilterInput, prettySize: StringQueryOperatorInput, publicURL: StringQueryOperatorInput, rdev: IntQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, root: StringQueryOperatorInput, size: IntQueryOperatorInput, sourceInstanceName: StringQueryOperatorInput, uid: IntQueryOperatorInput, url: StringQueryOperatorInput): File
@@ -1225,6 +1230,7 @@ type contentfulMainAboutRichTextNodeContent {
 
 type contentfulMainAboutRichTextNodeContentContent {
   content: [contentfulMainAboutRichTextNodeContentContentContent]
+  marks: [contentfulMainAboutRichTextNodeContentContentMarks]
   nodeType: String
   value: String
 }
@@ -1237,6 +1243,10 @@ type contentfulMainAboutRichTextNodeContentContentContent {
 type contentfulMainAboutRichTextNodeContentContentContentContent {
   nodeType: String
   value: String
+}
+
+type contentfulMainAboutRichTextNodeContentContentMarks {
+  type: String
 }
 
 type contentfulMainAboutRichTextNodeEdge {
@@ -1295,6 +1305,51 @@ type contentfulMainCompletedProjectsRichTextNodeGroupConnection {
   field: String!
   fieldValue: String
   nodes: [contentfulMainCompletedProjectsRichTextNode!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+type contentfulMainContactConsentRichTextNode implements Node {
+  children: [Node!]!
+  contactConsent: String
+  content: [contentfulMainContactConsentRichTextNodeContent]
+  id: ID!
+  internal: Internal!
+  json: JSON
+  nodeType: String @deprecated(reason : "This field is deprecated, please use 'json' instead.")
+  parent: Node
+}
+
+type contentfulMainContactConsentRichTextNodeConnection {
+  distinct(field: contentfulMainContactConsentRichTextNodeFieldsEnum!): [String!]!
+  edges: [contentfulMainContactConsentRichTextNodeEdge!]!
+  group(field: contentfulMainContactConsentRichTextNodeFieldsEnum!, limit: Int, skip: Int): [contentfulMainContactConsentRichTextNodeGroupConnection!]!
+  nodes: [contentfulMainContactConsentRichTextNode!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+type contentfulMainContactConsentRichTextNodeContent {
+  content: [contentfulMainContactConsentRichTextNodeContentContent]
+  nodeType: String
+}
+
+type contentfulMainContactConsentRichTextNodeContentContent {
+  nodeType: String
+  value: String
+}
+
+type contentfulMainContactConsentRichTextNodeEdge {
+  next: contentfulMainContactConsentRichTextNode
+  node: contentfulMainContactConsentRichTextNode!
+  previous: contentfulMainContactConsentRichTextNode
+}
+
+type contentfulMainContactConsentRichTextNodeGroupConnection {
+  edges: [contentfulMainContactConsentRichTextNodeEdge!]!
+  field: String!
+  fieldValue: String
+  nodes: [contentfulMainContactConsentRichTextNode!]!
   pageInfo: PageInfo!
   totalCount: Int!
 }
@@ -1885,6 +1940,26 @@ enum ContentfulCompletedProjectsFieldsEnum {
   main___childContentfulMainCompletedProjectsRichTextNode___nodeType
   main___childContentfulMainCompletedProjectsRichTextNode___parent___children
   main___childContentfulMainCompletedProjectsRichTextNode___parent___id
+  main___childContentfulMainContactConsentRichTextNode___children
+  main___childContentfulMainContactConsentRichTextNode___children___children
+  main___childContentfulMainContactConsentRichTextNode___children___id
+  main___childContentfulMainContactConsentRichTextNode___contactConsent
+  main___childContentfulMainContactConsentRichTextNode___content
+  main___childContentfulMainContactConsentRichTextNode___content___content
+  main___childContentfulMainContactConsentRichTextNode___content___nodeType
+  main___childContentfulMainContactConsentRichTextNode___id
+  main___childContentfulMainContactConsentRichTextNode___internal___content
+  main___childContentfulMainContactConsentRichTextNode___internal___contentDigest
+  main___childContentfulMainContactConsentRichTextNode___internal___description
+  main___childContentfulMainContactConsentRichTextNode___internal___fieldOwners
+  main___childContentfulMainContactConsentRichTextNode___internal___ignoreType
+  main___childContentfulMainContactConsentRichTextNode___internal___mediaType
+  main___childContentfulMainContactConsentRichTextNode___internal___owner
+  main___childContentfulMainContactConsentRichTextNode___internal___type
+  main___childContentfulMainContactConsentRichTextNode___json
+  main___childContentfulMainContactConsentRichTextNode___nodeType
+  main___childContentfulMainContactConsentRichTextNode___parent___children
+  main___childContentfulMainContactConsentRichTextNode___parent___id
   main___childContentfulMainContactRichTextNode___children
   main___childContentfulMainContactRichTextNode___children___children
   main___childContentfulMainContactRichTextNode___children___id
@@ -1960,6 +2035,26 @@ enum ContentfulCompletedProjectsFieldsEnum {
   main___completedProjects___nodeType
   main___completedProjects___parent___children
   main___completedProjects___parent___id
+  main___contactConsent___children
+  main___contactConsent___children___children
+  main___contactConsent___children___id
+  main___contactConsent___contactConsent
+  main___contactConsent___content
+  main___contactConsent___content___content
+  main___contactConsent___content___nodeType
+  main___contactConsent___id
+  main___contactConsent___internal___content
+  main___contactConsent___internal___contentDigest
+  main___contactConsent___internal___description
+  main___contactConsent___internal___fieldOwners
+  main___contactConsent___internal___ignoreType
+  main___contactConsent___internal___mediaType
+  main___contactConsent___internal___owner
+  main___contactConsent___internal___type
+  main___contactConsent___json
+  main___contactConsent___nodeType
+  main___contactConsent___parent___children
+  main___contactConsent___parent___id
   main___contact___children
   main___contact___children___children
   main___contact___children___id
@@ -2127,6 +2222,15 @@ enum ContentfulCompletedProjectsFieldsEnum {
   main___serviceList___serviceDescription___json
   main___serviceList___serviceDescription___nodeType
   main___serviceList___serviceDescription___serviceDescription
+  main___serviceList___serviceIcon___children
+  main___serviceList___serviceIcon___contentful_id
+  main___serviceList___serviceIcon___createdAt
+  main___serviceList___serviceIcon___description
+  main___serviceList___serviceIcon___id
+  main___serviceList___serviceIcon___node_locale
+  main___serviceList___serviceIcon___spaceId
+  main___serviceList___serviceIcon___title
+  main___serviceList___serviceIcon___updatedAt
   main___serviceList___spaceId
   main___serviceList___sys___revision
   main___serviceList___title
@@ -2504,6 +2608,7 @@ enum ContentfulMainFieldsEnum {
   about___content
   about___content___content
   about___content___content___content
+  about___content___content___marks
   about___content___content___nodeType
   about___content___content___value
   about___content___nodeType
@@ -2551,6 +2656,7 @@ enum ContentfulMainFieldsEnum {
   childContentfulMainAboutRichTextNode___content
   childContentfulMainAboutRichTextNode___content___content
   childContentfulMainAboutRichTextNode___content___content___content
+  childContentfulMainAboutRichTextNode___content___content___marks
   childContentfulMainAboutRichTextNode___content___content___nodeType
   childContentfulMainAboutRichTextNode___content___content___value
   childContentfulMainAboutRichTextNode___content___nodeType
@@ -2625,6 +2731,52 @@ enum ContentfulMainFieldsEnum {
   childContentfulMainCompletedProjectsRichTextNode___parent___internal___type
   childContentfulMainCompletedProjectsRichTextNode___parent___parent___children
   childContentfulMainCompletedProjectsRichTextNode___parent___parent___id
+  childContentfulMainContactConsentRichTextNode___children
+  childContentfulMainContactConsentRichTextNode___children___children
+  childContentfulMainContactConsentRichTextNode___children___children___children
+  childContentfulMainContactConsentRichTextNode___children___children___id
+  childContentfulMainContactConsentRichTextNode___children___id
+  childContentfulMainContactConsentRichTextNode___children___internal___content
+  childContentfulMainContactConsentRichTextNode___children___internal___contentDigest
+  childContentfulMainContactConsentRichTextNode___children___internal___description
+  childContentfulMainContactConsentRichTextNode___children___internal___fieldOwners
+  childContentfulMainContactConsentRichTextNode___children___internal___ignoreType
+  childContentfulMainContactConsentRichTextNode___children___internal___mediaType
+  childContentfulMainContactConsentRichTextNode___children___internal___owner
+  childContentfulMainContactConsentRichTextNode___children___internal___type
+  childContentfulMainContactConsentRichTextNode___children___parent___children
+  childContentfulMainContactConsentRichTextNode___children___parent___id
+  childContentfulMainContactConsentRichTextNode___contactConsent
+  childContentfulMainContactConsentRichTextNode___content
+  childContentfulMainContactConsentRichTextNode___content___content
+  childContentfulMainContactConsentRichTextNode___content___content___nodeType
+  childContentfulMainContactConsentRichTextNode___content___content___value
+  childContentfulMainContactConsentRichTextNode___content___nodeType
+  childContentfulMainContactConsentRichTextNode___id
+  childContentfulMainContactConsentRichTextNode___internal___content
+  childContentfulMainContactConsentRichTextNode___internal___contentDigest
+  childContentfulMainContactConsentRichTextNode___internal___description
+  childContentfulMainContactConsentRichTextNode___internal___fieldOwners
+  childContentfulMainContactConsentRichTextNode___internal___ignoreType
+  childContentfulMainContactConsentRichTextNode___internal___mediaType
+  childContentfulMainContactConsentRichTextNode___internal___owner
+  childContentfulMainContactConsentRichTextNode___internal___type
+  childContentfulMainContactConsentRichTextNode___json
+  childContentfulMainContactConsentRichTextNode___nodeType
+  childContentfulMainContactConsentRichTextNode___parent___children
+  childContentfulMainContactConsentRichTextNode___parent___children___children
+  childContentfulMainContactConsentRichTextNode___parent___children___id
+  childContentfulMainContactConsentRichTextNode___parent___id
+  childContentfulMainContactConsentRichTextNode___parent___internal___content
+  childContentfulMainContactConsentRichTextNode___parent___internal___contentDigest
+  childContentfulMainContactConsentRichTextNode___parent___internal___description
+  childContentfulMainContactConsentRichTextNode___parent___internal___fieldOwners
+  childContentfulMainContactConsentRichTextNode___parent___internal___ignoreType
+  childContentfulMainContactConsentRichTextNode___parent___internal___mediaType
+  childContentfulMainContactConsentRichTextNode___parent___internal___owner
+  childContentfulMainContactConsentRichTextNode___parent___internal___type
+  childContentfulMainContactConsentRichTextNode___parent___parent___children
+  childContentfulMainContactConsentRichTextNode___parent___parent___id
   childContentfulMainContactRichTextNode___children
   childContentfulMainContactRichTextNode___children___children
   childContentfulMainContactRichTextNode___children___children___children
@@ -2803,6 +2955,52 @@ enum ContentfulMainFieldsEnum {
   completedProjects___parent___internal___type
   completedProjects___parent___parent___children
   completedProjects___parent___parent___id
+  contactConsent___children
+  contactConsent___children___children
+  contactConsent___children___children___children
+  contactConsent___children___children___id
+  contactConsent___children___id
+  contactConsent___children___internal___content
+  contactConsent___children___internal___contentDigest
+  contactConsent___children___internal___description
+  contactConsent___children___internal___fieldOwners
+  contactConsent___children___internal___ignoreType
+  contactConsent___children___internal___mediaType
+  contactConsent___children___internal___owner
+  contactConsent___children___internal___type
+  contactConsent___children___parent___children
+  contactConsent___children___parent___id
+  contactConsent___contactConsent
+  contactConsent___content
+  contactConsent___content___content
+  contactConsent___content___content___nodeType
+  contactConsent___content___content___value
+  contactConsent___content___nodeType
+  contactConsent___id
+  contactConsent___internal___content
+  contactConsent___internal___contentDigest
+  contactConsent___internal___description
+  contactConsent___internal___fieldOwners
+  contactConsent___internal___ignoreType
+  contactConsent___internal___mediaType
+  contactConsent___internal___owner
+  contactConsent___internal___type
+  contactConsent___json
+  contactConsent___nodeType
+  contactConsent___parent___children
+  contactConsent___parent___children___children
+  contactConsent___parent___children___id
+  contactConsent___parent___id
+  contactConsent___parent___internal___content
+  contactConsent___parent___internal___contentDigest
+  contactConsent___parent___internal___description
+  contactConsent___parent___internal___fieldOwners
+  contactConsent___parent___internal___ignoreType
+  contactConsent___parent___internal___mediaType
+  contactConsent___parent___internal___owner
+  contactConsent___parent___internal___type
+  contactConsent___parent___parent___children
+  contactConsent___parent___parent___id
   contact___children
   contact___children___children
   contact___children___children___children
@@ -3014,6 +3212,12 @@ enum ContentfulMainFieldsEnum {
   projectsList___main___childContentfulMainCompletedProjectsRichTextNode___id
   projectsList___main___childContentfulMainCompletedProjectsRichTextNode___json
   projectsList___main___childContentfulMainCompletedProjectsRichTextNode___nodeType
+  projectsList___main___childContentfulMainContactConsentRichTextNode___children
+  projectsList___main___childContentfulMainContactConsentRichTextNode___contactConsent
+  projectsList___main___childContentfulMainContactConsentRichTextNode___content
+  projectsList___main___childContentfulMainContactConsentRichTextNode___id
+  projectsList___main___childContentfulMainContactConsentRichTextNode___json
+  projectsList___main___childContentfulMainContactConsentRichTextNode___nodeType
   projectsList___main___childContentfulMainContactRichTextNode___children
   projectsList___main___childContentfulMainContactRichTextNode___contact
   projectsList___main___childContentfulMainContactRichTextNode___content
@@ -3035,6 +3239,12 @@ enum ContentfulMainFieldsEnum {
   projectsList___main___completedProjects___id
   projectsList___main___completedProjects___json
   projectsList___main___completedProjects___nodeType
+  projectsList___main___contactConsent___children
+  projectsList___main___contactConsent___contactConsent
+  projectsList___main___contactConsent___content
+  projectsList___main___contactConsent___id
+  projectsList___main___contactConsent___json
+  projectsList___main___contactConsent___nodeType
   projectsList___main___contact___children
   projectsList___main___contact___contact
   projectsList___main___contact___content
@@ -3294,6 +3504,12 @@ enum ContentfulMainFieldsEnum {
   serviceList___main___childContentfulMainCompletedProjectsRichTextNode___id
   serviceList___main___childContentfulMainCompletedProjectsRichTextNode___json
   serviceList___main___childContentfulMainCompletedProjectsRichTextNode___nodeType
+  serviceList___main___childContentfulMainContactConsentRichTextNode___children
+  serviceList___main___childContentfulMainContactConsentRichTextNode___contactConsent
+  serviceList___main___childContentfulMainContactConsentRichTextNode___content
+  serviceList___main___childContentfulMainContactConsentRichTextNode___id
+  serviceList___main___childContentfulMainContactConsentRichTextNode___json
+  serviceList___main___childContentfulMainContactConsentRichTextNode___nodeType
   serviceList___main___childContentfulMainContactRichTextNode___children
   serviceList___main___childContentfulMainContactRichTextNode___contact
   serviceList___main___childContentfulMainContactRichTextNode___content
@@ -3315,6 +3531,12 @@ enum ContentfulMainFieldsEnum {
   serviceList___main___completedProjects___id
   serviceList___main___completedProjects___json
   serviceList___main___completedProjects___nodeType
+  serviceList___main___contactConsent___children
+  serviceList___main___contactConsent___contactConsent
+  serviceList___main___contactConsent___content
+  serviceList___main___contactConsent___id
+  serviceList___main___contactConsent___json
+  serviceList___main___contactConsent___nodeType
   serviceList___main___contact___children
   serviceList___main___contact___contact
   serviceList___main___contact___content
@@ -3402,6 +3624,108 @@ enum ContentfulMainFieldsEnum {
   serviceList___serviceDescription___parent___children
   serviceList___serviceDescription___parent___id
   serviceList___serviceDescription___serviceDescription
+  serviceList___serviceIcon___children
+  serviceList___serviceIcon___children___children
+  serviceList___serviceIcon___children___id
+  serviceList___serviceIcon___contentful_id
+  serviceList___serviceIcon___createdAt
+  serviceList___serviceIcon___description
+  serviceList___serviceIcon___file___contentType
+  serviceList___serviceIcon___file___fileName
+  serviceList___serviceIcon___file___url
+  serviceList___serviceIcon___fixed___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___fixed___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___fixed___height @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___fixed___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___fixed___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___fixed___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___fixed___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___fixed___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___fixed___width @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___fluid___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___fluid___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___fluid___sizes @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___fluid___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___fluid___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___fluid___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___fluid___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___fluid___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___id
+  serviceList___serviceIcon___internal___content
+  serviceList___serviceIcon___internal___contentDigest
+  serviceList___serviceIcon___internal___description
+  serviceList___serviceIcon___internal___fieldOwners
+  serviceList___serviceIcon___internal___ignoreType
+  serviceList___serviceIcon___internal___mediaType
+  serviceList___serviceIcon___internal___owner
+  serviceList___serviceIcon___internal___type
+  serviceList___serviceIcon___localFile___absolutePath
+  serviceList___serviceIcon___localFile___accessTime
+  serviceList___serviceIcon___localFile___atime
+  serviceList___serviceIcon___localFile___atimeMs
+  serviceList___serviceIcon___localFile___base
+  serviceList___serviceIcon___localFile___birthTime
+  serviceList___serviceIcon___localFile___birthtime
+  serviceList___serviceIcon___localFile___birthtimeMs
+  serviceList___serviceIcon___localFile___blksize
+  serviceList___serviceIcon___localFile___blocks
+  serviceList___serviceIcon___localFile___changeTime
+  serviceList___serviceIcon___localFile___children
+  serviceList___serviceIcon___localFile___ctime
+  serviceList___serviceIcon___localFile___ctimeMs
+  serviceList___serviceIcon___localFile___dev
+  serviceList___serviceIcon___localFile___dir
+  serviceList___serviceIcon___localFile___ext
+  serviceList___serviceIcon___localFile___extension
+  serviceList___serviceIcon___localFile___gid
+  serviceList___serviceIcon___localFile___id
+  serviceList___serviceIcon___localFile___ino
+  serviceList___serviceIcon___localFile___mode
+  serviceList___serviceIcon___localFile___modifiedTime
+  serviceList___serviceIcon___localFile___mtime
+  serviceList___serviceIcon___localFile___mtimeMs
+  serviceList___serviceIcon___localFile___name
+  serviceList___serviceIcon___localFile___nlink
+  serviceList___serviceIcon___localFile___prettySize
+  serviceList___serviceIcon___localFile___publicURL
+  serviceList___serviceIcon___localFile___rdev
+  serviceList___serviceIcon___localFile___relativeDirectory
+  serviceList___serviceIcon___localFile___relativePath
+  serviceList___serviceIcon___localFile___root
+  serviceList___serviceIcon___localFile___size
+  serviceList___serviceIcon___localFile___sourceInstanceName
+  serviceList___serviceIcon___localFile___uid
+  serviceList___serviceIcon___localFile___url
+  serviceList___serviceIcon___node_locale
+  serviceList___serviceIcon___parent___children
+  serviceList___serviceIcon___parent___id
+  serviceList___serviceIcon___resize___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___resize___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___resize___height @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___resize___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___resize___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___resize___width @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___resolutions___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___resolutions___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___resolutions___height @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___resolutions___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___resolutions___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___resolutions___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___resolutions___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___resolutions___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___resolutions___width @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___sizes___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___sizes___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___sizes___sizes @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___sizes___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___sizes___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___sizes___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___sizes___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___sizes___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceList___serviceIcon___spaceId
+  serviceList___serviceIcon___sys___revision
+  serviceList___serviceIcon___title
+  serviceList___serviceIcon___updatedAt
   serviceList___spaceId
   serviceList___sys___revision
   serviceList___title
@@ -3575,6 +3899,26 @@ enum ContentfulServiceFieldsEnum {
   main___childContentfulMainCompletedProjectsRichTextNode___nodeType
   main___childContentfulMainCompletedProjectsRichTextNode___parent___children
   main___childContentfulMainCompletedProjectsRichTextNode___parent___id
+  main___childContentfulMainContactConsentRichTextNode___children
+  main___childContentfulMainContactConsentRichTextNode___children___children
+  main___childContentfulMainContactConsentRichTextNode___children___id
+  main___childContentfulMainContactConsentRichTextNode___contactConsent
+  main___childContentfulMainContactConsentRichTextNode___content
+  main___childContentfulMainContactConsentRichTextNode___content___content
+  main___childContentfulMainContactConsentRichTextNode___content___nodeType
+  main___childContentfulMainContactConsentRichTextNode___id
+  main___childContentfulMainContactConsentRichTextNode___internal___content
+  main___childContentfulMainContactConsentRichTextNode___internal___contentDigest
+  main___childContentfulMainContactConsentRichTextNode___internal___description
+  main___childContentfulMainContactConsentRichTextNode___internal___fieldOwners
+  main___childContentfulMainContactConsentRichTextNode___internal___ignoreType
+  main___childContentfulMainContactConsentRichTextNode___internal___mediaType
+  main___childContentfulMainContactConsentRichTextNode___internal___owner
+  main___childContentfulMainContactConsentRichTextNode___internal___type
+  main___childContentfulMainContactConsentRichTextNode___json
+  main___childContentfulMainContactConsentRichTextNode___nodeType
+  main___childContentfulMainContactConsentRichTextNode___parent___children
+  main___childContentfulMainContactConsentRichTextNode___parent___id
   main___childContentfulMainContactRichTextNode___children
   main___childContentfulMainContactRichTextNode___children___children
   main___childContentfulMainContactRichTextNode___children___id
@@ -3650,6 +3994,26 @@ enum ContentfulServiceFieldsEnum {
   main___completedProjects___nodeType
   main___completedProjects___parent___children
   main___completedProjects___parent___id
+  main___contactConsent___children
+  main___contactConsent___children___children
+  main___contactConsent___children___id
+  main___contactConsent___contactConsent
+  main___contactConsent___content
+  main___contactConsent___content___content
+  main___contactConsent___content___nodeType
+  main___contactConsent___id
+  main___contactConsent___internal___content
+  main___contactConsent___internal___contentDigest
+  main___contactConsent___internal___description
+  main___contactConsent___internal___fieldOwners
+  main___contactConsent___internal___ignoreType
+  main___contactConsent___internal___mediaType
+  main___contactConsent___internal___owner
+  main___contactConsent___internal___type
+  main___contactConsent___json
+  main___contactConsent___nodeType
+  main___contactConsent___parent___children
+  main___contactConsent___parent___id
   main___contact___children
   main___contact___children___children
   main___contact___children___id
@@ -3817,6 +4181,15 @@ enum ContentfulServiceFieldsEnum {
   main___serviceList___serviceDescription___json
   main___serviceList___serviceDescription___nodeType
   main___serviceList___serviceDescription___serviceDescription
+  main___serviceList___serviceIcon___children
+  main___serviceList___serviceIcon___contentful_id
+  main___serviceList___serviceIcon___createdAt
+  main___serviceList___serviceIcon___description
+  main___serviceList___serviceIcon___id
+  main___serviceList___serviceIcon___node_locale
+  main___serviceList___serviceIcon___spaceId
+  main___serviceList___serviceIcon___title
+  main___serviceList___serviceIcon___updatedAt
   main___serviceList___spaceId
   main___serviceList___sys___revision
   main___serviceList___title
@@ -3911,6 +4284,147 @@ enum ContentfulServiceFieldsEnum {
   serviceDescription___parent___parent___children
   serviceDescription___parent___parent___id
   serviceDescription___serviceDescription
+  serviceIcon___children
+  serviceIcon___children___children
+  serviceIcon___children___children___children
+  serviceIcon___children___children___id
+  serviceIcon___children___id
+  serviceIcon___children___internal___content
+  serviceIcon___children___internal___contentDigest
+  serviceIcon___children___internal___description
+  serviceIcon___children___internal___fieldOwners
+  serviceIcon___children___internal___ignoreType
+  serviceIcon___children___internal___mediaType
+  serviceIcon___children___internal___owner
+  serviceIcon___children___internal___type
+  serviceIcon___children___parent___children
+  serviceIcon___children___parent___id
+  serviceIcon___contentful_id
+  serviceIcon___createdAt
+  serviceIcon___description
+  serviceIcon___file___contentType
+  serviceIcon___file___details___size
+  serviceIcon___file___fileName
+  serviceIcon___file___url
+  serviceIcon___fixed___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___fixed___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___fixed___height @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___fixed___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___fixed___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___fixed___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___fixed___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___fixed___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___fixed___width @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___fluid___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___fluid___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___fluid___sizes @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___fluid___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___fluid___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___fluid___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___fluid___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___fluid___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___id
+  serviceIcon___internal___content
+  serviceIcon___internal___contentDigest
+  serviceIcon___internal___description
+  serviceIcon___internal___fieldOwners
+  serviceIcon___internal___ignoreType
+  serviceIcon___internal___mediaType
+  serviceIcon___internal___owner
+  serviceIcon___internal___type
+  serviceIcon___localFile___absolutePath
+  serviceIcon___localFile___accessTime
+  serviceIcon___localFile___atime
+  serviceIcon___localFile___atimeMs
+  serviceIcon___localFile___base
+  serviceIcon___localFile___birthTime
+  serviceIcon___localFile___birthtime
+  serviceIcon___localFile___birthtimeMs
+  serviceIcon___localFile___blksize
+  serviceIcon___localFile___blocks
+  serviceIcon___localFile___changeTime
+  serviceIcon___localFile___childImageSharp___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___localFile___childImageSharp___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___localFile___children
+  serviceIcon___localFile___children___children
+  serviceIcon___localFile___children___id
+  serviceIcon___localFile___ctime
+  serviceIcon___localFile___ctimeMs
+  serviceIcon___localFile___dev
+  serviceIcon___localFile___dir
+  serviceIcon___localFile___ext
+  serviceIcon___localFile___extension
+  serviceIcon___localFile___gid
+  serviceIcon___localFile___id
+  serviceIcon___localFile___ino
+  serviceIcon___localFile___internal___content
+  serviceIcon___localFile___internal___contentDigest
+  serviceIcon___localFile___internal___description
+  serviceIcon___localFile___internal___fieldOwners
+  serviceIcon___localFile___internal___ignoreType
+  serviceIcon___localFile___internal___mediaType
+  serviceIcon___localFile___internal___owner
+  serviceIcon___localFile___internal___type
+  serviceIcon___localFile___mode
+  serviceIcon___localFile___modifiedTime
+  serviceIcon___localFile___mtime
+  serviceIcon___localFile___mtimeMs
+  serviceIcon___localFile___name
+  serviceIcon___localFile___nlink
+  serviceIcon___localFile___parent___children
+  serviceIcon___localFile___parent___id
+  serviceIcon___localFile___prettySize
+  serviceIcon___localFile___publicURL
+  serviceIcon___localFile___rdev
+  serviceIcon___localFile___relativeDirectory
+  serviceIcon___localFile___relativePath
+  serviceIcon___localFile___root
+  serviceIcon___localFile___size
+  serviceIcon___localFile___sourceInstanceName
+  serviceIcon___localFile___uid
+  serviceIcon___localFile___url
+  serviceIcon___node_locale
+  serviceIcon___parent___children
+  serviceIcon___parent___children___children
+  serviceIcon___parent___children___id
+  serviceIcon___parent___id
+  serviceIcon___parent___internal___content
+  serviceIcon___parent___internal___contentDigest
+  serviceIcon___parent___internal___description
+  serviceIcon___parent___internal___fieldOwners
+  serviceIcon___parent___internal___ignoreType
+  serviceIcon___parent___internal___mediaType
+  serviceIcon___parent___internal___owner
+  serviceIcon___parent___internal___type
+  serviceIcon___parent___parent___children
+  serviceIcon___parent___parent___id
+  serviceIcon___resize___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___resize___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___resize___height @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___resize___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___resize___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___resize___width @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___resolutions___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___resolutions___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___resolutions___height @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___resolutions___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___resolutions___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___resolutions___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___resolutions___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___resolutions___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___resolutions___width @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___sizes___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___sizes___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___sizes___sizes @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___sizes___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___sizes___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___sizes___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___sizes___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___sizes___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  serviceIcon___spaceId
+  serviceIcon___sys___revision
+  serviceIcon___title
+  serviceIcon___updatedAt
   spaceId
   sys___contentType___sys___contentful_id
   sys___contentType___sys___id
@@ -5121,6 +5635,8 @@ enum contentfulMainAboutRichTextNodeFieldsEnum {
   content___content___content
   content___content___content___content
   content___content___content___nodeType
+  content___content___marks
+  content___content___marks___type
   content___content___nodeType
   content___content___value
   content___nodeType
@@ -5216,6 +5732,103 @@ enum contentfulMainCompletedProjectsRichTextNodeFieldsEnum {
   children___parent___parent___children
   children___parent___parent___id
   completedProjects
+  content
+  content___content
+  content___content___nodeType
+  content___content___value
+  content___nodeType
+  id
+  internal___content
+  internal___contentDigest
+  internal___description
+  internal___fieldOwners
+  internal___ignoreType
+  internal___mediaType
+  internal___owner
+  internal___type
+  json
+  nodeType
+  parent___children
+  parent___children___children
+  parent___children___children___children
+  parent___children___children___id
+  parent___children___id
+  parent___children___internal___content
+  parent___children___internal___contentDigest
+  parent___children___internal___description
+  parent___children___internal___fieldOwners
+  parent___children___internal___ignoreType
+  parent___children___internal___mediaType
+  parent___children___internal___owner
+  parent___children___internal___type
+  parent___children___parent___children
+  parent___children___parent___id
+  parent___id
+  parent___internal___content
+  parent___internal___contentDigest
+  parent___internal___description
+  parent___internal___fieldOwners
+  parent___internal___ignoreType
+  parent___internal___mediaType
+  parent___internal___owner
+  parent___internal___type
+  parent___parent___children
+  parent___parent___children___children
+  parent___parent___children___id
+  parent___parent___id
+  parent___parent___internal___content
+  parent___parent___internal___contentDigest
+  parent___parent___internal___description
+  parent___parent___internal___fieldOwners
+  parent___parent___internal___ignoreType
+  parent___parent___internal___mediaType
+  parent___parent___internal___owner
+  parent___parent___internal___type
+  parent___parent___parent___children
+  parent___parent___parent___id
+}
+
+enum contentfulMainContactConsentRichTextNodeFieldsEnum {
+  children
+  children___children
+  children___children___children
+  children___children___children___children
+  children___children___children___id
+  children___children___id
+  children___children___internal___content
+  children___children___internal___contentDigest
+  children___children___internal___description
+  children___children___internal___fieldOwners
+  children___children___internal___ignoreType
+  children___children___internal___mediaType
+  children___children___internal___owner
+  children___children___internal___type
+  children___children___parent___children
+  children___children___parent___id
+  children___id
+  children___internal___content
+  children___internal___contentDigest
+  children___internal___description
+  children___internal___fieldOwners
+  children___internal___ignoreType
+  children___internal___mediaType
+  children___internal___owner
+  children___internal___type
+  children___parent___children
+  children___parent___children___children
+  children___parent___children___id
+  children___parent___id
+  children___parent___internal___content
+  children___parent___internal___contentDigest
+  children___parent___internal___description
+  children___parent___internal___fieldOwners
+  children___parent___internal___ignoreType
+  children___parent___internal___mediaType
+  children___parent___internal___owner
+  children___parent___internal___type
+  children___parent___parent___children
+  children___parent___parent___id
+  contactConsent
   content
   content___content
   content___content___nodeType
@@ -5707,11 +6320,13 @@ input ContentfulMainFilterInput {
   about: contentfulMainAboutRichTextNodeFilterInput
   childContentfulMainAboutRichTextNode: contentfulMainAboutRichTextNodeFilterInput
   childContentfulMainCompletedProjectsRichTextNode: contentfulMainCompletedProjectsRichTextNodeFilterInput
+  childContentfulMainContactConsentRichTextNode: contentfulMainContactConsentRichTextNodeFilterInput
   childContentfulMainContactRichTextNode: contentfulMainContactRichTextNodeFilterInput
   childContentfulMainIntroRichTextNode: contentfulMainIntroRichTextNodeFilterInput
   children: NodeFilterListInput
   completedProjects: contentfulMainCompletedProjectsRichTextNodeFilterInput
   contact: contentfulMainContactRichTextNodeFilterInput
+  contactConsent: contentfulMainContactConsentRichTextNodeFilterInput
   contentful_id: StringQueryOperatorInput
   createdAt: DateQueryOperatorInput
   id: StringQueryOperatorInput
@@ -5786,6 +6401,7 @@ input ContentfulServiceFilterInput {
   node_locale: StringQueryOperatorInput
   parent: NodeFilterInput
   serviceDescription: contentfulServiceServiceDescriptionRichTextNodeFilterInput
+  serviceIcon: ContentfulAssetFilterInput
   spaceId: StringQueryOperatorInput
   sys: ContentfulServiceSysFilterInput
   title: StringQueryOperatorInput
@@ -6333,12 +6949,21 @@ input contentfulMainAboutRichTextNodeContentContentContentFilterListInput {
 
 input contentfulMainAboutRichTextNodeContentContentFilterInput {
   content: contentfulMainAboutRichTextNodeContentContentContentFilterListInput
+  marks: contentfulMainAboutRichTextNodeContentContentMarksFilterListInput
   nodeType: StringQueryOperatorInput
   value: StringQueryOperatorInput
 }
 
 input contentfulMainAboutRichTextNodeContentContentFilterListInput {
   elemMatch: contentfulMainAboutRichTextNodeContentContentFilterInput
+}
+
+input contentfulMainAboutRichTextNodeContentContentMarksFilterInput {
+  type: StringQueryOperatorInput
+}
+
+input contentfulMainAboutRichTextNodeContentContentMarksFilterListInput {
+  elemMatch: contentfulMainAboutRichTextNodeContentContentMarksFilterInput
 }
 
 input contentfulMainAboutRichTextNodeContentFilterInput {
@@ -6397,6 +7022,40 @@ input contentfulMainCompletedProjectsRichTextNodeFilterInput {
 
 input contentfulMainCompletedProjectsRichTextNodeSortInput {
   fields: [contentfulMainCompletedProjectsRichTextNodeFieldsEnum]
+  order: [SortOrderEnum] = [ASC]
+}
+
+input contentfulMainContactConsentRichTextNodeContentContentFilterInput {
+  nodeType: StringQueryOperatorInput
+  value: StringQueryOperatorInput
+}
+
+input contentfulMainContactConsentRichTextNodeContentContentFilterListInput {
+  elemMatch: contentfulMainContactConsentRichTextNodeContentContentFilterInput
+}
+
+input contentfulMainContactConsentRichTextNodeContentFilterInput {
+  content: contentfulMainContactConsentRichTextNodeContentContentFilterListInput
+  nodeType: StringQueryOperatorInput
+}
+
+input contentfulMainContactConsentRichTextNodeContentFilterListInput {
+  elemMatch: contentfulMainContactConsentRichTextNodeContentFilterInput
+}
+
+input contentfulMainContactConsentRichTextNodeFilterInput {
+  children: NodeFilterListInput
+  contactConsent: StringQueryOperatorInput
+  content: contentfulMainContactConsentRichTextNodeContentFilterListInput
+  id: StringQueryOperatorInput
+  internal: InternalFilterInput
+  json: JSONQueryOperatorInput
+  nodeType: StringQueryOperatorInput
+  parent: NodeFilterInput
+}
+
+input contentfulMainContactConsentRichTextNodeSortInput {
+  fields: [contentfulMainContactConsentRichTextNodeFieldsEnum]
   order: [SortOrderEnum] = [ASC]
 }
 
